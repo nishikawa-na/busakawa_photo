@@ -1,8 +1,8 @@
-ER図 
-https://drive.google.com/file/d/1ZuqENoHK86UPkDyqek4P9yIwNPneaELs/view?usp=sharing
-
 画面遷移図
 https://www.figma.com/design/8q2NPfJ4SakHKXA8uxrx0q/root?node-id=0-1&t=vCUH9f3A1CoTNccs-1
+
+ER図 
+https://drive.google.com/file/d/1ZuqENoHK86UPkDyqek4P9yIwNPneaELs/view?usp=sharing
 
 ■サービス概要
 このサービスは、愛犬のぶさかわをユーザー間で投稿し合い、共有し、
