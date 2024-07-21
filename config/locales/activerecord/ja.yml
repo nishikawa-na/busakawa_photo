@@ -1,0 +1,6 @@
+ja:
+  activerecord:
+    models:
+  ##model全体に対応させるときはmodelsの階層を作り、
+  ##カラム名を対応させるときはattributesの階層を作って日本語化にする文字を記入
+    attributes:
