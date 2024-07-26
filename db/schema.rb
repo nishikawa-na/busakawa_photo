@@ -10,8 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 0) do
+ActiveRecord::Schema[7.1].define(version: 2024_07_22_075356) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "users", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "email", null: false
+    t.string "password_digest", null: false
+    t.string "instagram_account_url"
+    t.string "line_user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "avatar"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["instagram_account_url"], name: "index_users_on_instagram_account_url", unique: true
+    t.index ["line_user_id"], name: "index_users_on_line_user_id", unique: true
+    t.index ["password_digest"], name: "index_users_on_password_digest", unique: true
+  end
 
 end

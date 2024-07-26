@@ -1,8 +1,22 @@
 ja:
   fotters:
     inquiry:
-      inquiry: 'お問い合わせ'
+      inquiry: お問い合わせ
     policy:
-      policy: 'プライバシーポリシー'
+      policy: プライバシーポリシー
     terms:
-      terms: '利用規約'
+      terms: 利用規約
+  users:
+    new:
+      push: 送信
+    edit:
+      push: 編集
+    show:
+      account_information_change: アカウント情報変更はこちら
+  user_sessions:
+    new:
+      push: ログイン
+  static_pages:
+    index:
+      sign up: 新規登録
+      login: ログイン

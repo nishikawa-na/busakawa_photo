@@ -4,3 +4,9 @@ ja:
   ##model全体に対応させるときはmodelsの階層を作り、
   ##カラム名を対応させるときはattributesの階層を作って日本語化にする文字を記入
     attributes:
+      user:
+        name: 愛犬名
+        email: メールアドレス
+        avatar: プロフィール画像
+        password: パスワード
+        password_confirmation: パスワード確認

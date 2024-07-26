@@ -1,0 +1,21 @@
+<h1>アカウント作成</h1>
+<%= form_with model: @user do |form| %>
+  <%= render 'shared/error_messages', object: form.object %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :email %>
+  <%= form.text_field :email %>
+
+  <%= form.label :avatar %>
+  <%= form.file_field :avatar %>
+  <%= form.hidden_field :avatar_cache %>
+
+  <%= form.label :password %>
+  <%= form.password_field :password %>
+
+  <%= form.label :password_confirmation %>
+  <%= form.password_field :password_confirmation %>
+
+  <%= form.submit t('.push') %>
+<% end %>
