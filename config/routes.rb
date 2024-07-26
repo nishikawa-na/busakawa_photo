@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   get "inquiry", to: "fotters#inquiry"
   get "terms", to: "fotters#terms"
   get "policy", to: "fotters#policy"
+  get 'login', to: 'user_sessions#new'
+  post 'login', to: 'user_sessions#create'
+  delete 'logout', to: 'user_sessions#destroy'
+  resources :users
   # Defines the root path route ("/")
   # root "posts#index"
 end

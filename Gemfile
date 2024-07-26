@@ -46,6 +46,10 @@ gem "bootsnap", require: false
 
 gem 'rails-i18n', '~> 7.0.0'
 
+gem 'sorcery'
+
+gem 'carrierwave', '~> 3.0'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -63,6 +67,7 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem 'pry-byebug'
 end
 
 group :test do
