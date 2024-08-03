@@ -20,3 +20,7 @@ ja:
     index:
       sign up: 新規登録
       login: ログイン
+      guest: ゲスト
+  posts:
+    new:
+      push: 投稿

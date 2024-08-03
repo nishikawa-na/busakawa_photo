@@ -13,8 +13,7 @@ class UsersController < ApplicationController
     @user = User.new(params_user)
       if @user.save
         auto_login(@user)
-        redirect_to root_path, notice: "アカウント作成しログインしました"
-        ###パス先は後で修正
+        redirect_to posts_path
       else
         render :new, status: :unprocessable_entity
       end

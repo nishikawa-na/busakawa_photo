@@ -4,8 +4,7 @@ class UserSessionsController < ApplicationController
 
   def create
     if login(params[:email],params[:password])
-      redirect_to root_path
-      ##パス先は後で修正
+      redirect_to posts_path
     else
       render :new
     end

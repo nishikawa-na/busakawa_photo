@@ -10,3 +10,8 @@ ja:
         avatar: プロフィール画像
         password: パスワード
         password_confirmation: パスワード確認
+      post:
+        post: 投稿
+        title: タイトル
+        body: 説明
+        images: 画像
