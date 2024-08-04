@@ -1,2 +1,19 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<h1>投稿一覧</h1>
+<div class="container">
+  <div class="row">
+    <% @posts.each do |post| %>
+      <div class="border border-info col-xs-6 col-sm-4 col-md-3">
+        <%= link_to post_path(post), class: "post_show" do %>
+          <%= image_tag post.images[0].url, size: '200x200' %>
+          <div class="title">
+            <%= post.title %>
+          </div>
+        <% end %>
+          <div class="user">
+            <%= post.user.name %>
+            <%= image_tag post.user.avatar.url, class: "rounded-circle", size: '50x50' %>
+          </div>
+      </div>
+    <% end %>
+  </div>
+</div>
