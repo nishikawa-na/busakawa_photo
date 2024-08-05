@@ -9,21 +9,11 @@
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
     </div>
     <div class="carousel-inner">
-      <div class="carousel-item active">
-        <%= image_tag @post.images[0].url, class:"d-block w-100" %>
-      </div>
-      <div class="carousel-item">
-        <%= image_tag @post.images[1].url, class:"d-block w-100" %>
-      </div>
-      <div class="carousel-item">
-        <%= image_tag @post.images[2].url, class:"d-block w-100" %>
-      </div>
-      <div class="carousel-item">
-        <%= image_tag @post.images[3].url, class:"d-block w-100" %>
-      </div>
-      <div class="carousel-item">
-        <%= image_tag @post.images[4].url, class:"d-block w-100" %>
-      </div>
+      <% @post.images.each_with_index do |image, index| %>
+        <div class="carousel-item <%= 'active' if index == 0 %>">
+          <%= image_tag image.url, class: "d-block w-100" %>
+        </div>
+      <% end %>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
