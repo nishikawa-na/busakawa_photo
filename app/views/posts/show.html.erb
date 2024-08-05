@@ -1,2 +1,37 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<h1>投稿詳細</h1>
+<div class="border border-info col-xs-6 col-sm-4 col-md-3">
+  <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    </div>
+    <div class="carousel-inner">
+      <% @post.images.each_with_index do |image, index| %>
+        <div class="carousel-item <%= 'active' if index == 0 %>">
+          <%= image_tag image.url, class: "d-block w-100" %>
+        </div>
+      <% end %>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    <div class="title">
+      <%= @post.title %>
+    </div>
+    <div class= "post_body">
+      <%= @post.body %>
+    </div>
+    <div class="user">
+      <%= @post.user.name %>
+      <%= image_tag @post.user.avatar.url, class: "rounded-circle", size: '50x50' %>
+    </div>
+  </div>
+</div>
