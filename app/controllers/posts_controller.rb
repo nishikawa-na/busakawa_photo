@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    set_post
   end
 
   def new
@@ -33,5 +34,9 @@ class PostsController < ApplicationController
 
   def params_post
     params.require(:post).permit(:title, :body, :images_cache, {images: []}).merge(user_id: current_user.id)
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
   end
 end
