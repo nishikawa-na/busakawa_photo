@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   skip_before_action :require_login, only: %i[index]
+
   def index
     @posts = Post.includes(:user).order("created_at DESC")
   end
@@ -22,12 +23,25 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @post = current_user.posts.find(params[:id])
   end
 
   def update
+    @post = Post.find(params[:id])
+    if @post.update(params_post)
+      redirect_to post_path(@post)
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
+    @post = Post.find(params[:id])
+    if @post.destroy
+      redirect_to posts_path
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   private

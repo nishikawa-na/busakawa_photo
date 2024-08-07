@@ -24,3 +24,8 @@ ja:
   posts:
     new:
       push: 投稿
+    show:
+      post_edit: 編集
+      post_destroy: 削除
+    edit:
+      push: 編集

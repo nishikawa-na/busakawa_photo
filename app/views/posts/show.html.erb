@@ -23,15 +23,19 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
-    <div class="title">
-      <%= @post.title %>
-    </div>
-    <div class= "post_body">
-      <%= @post.body %>
-    </div>
-    <div class="user">
-      <%= @post.user.name %>
-      <%= image_tag @post.user.avatar.url, class: "rounded-circle", size: '50x50' %>
-    </div>
+  </div>
+  <div class="title">
+    <%= @post.title %>
+  </div>
+  <div class= "post_body">
+    <%= @post.body %>
+  </div>
+  <% if @post.user.id == current_user.id %>
+    <%= button_to t('.post_edit'), edit_post_path(@post.id), method: :get, class: "btn btn-info", data: { turbo: false } %>
+    <%= button_to t('.post_destroy'), post_path(@post), { method: :delete, class: "btn btn-danger", data: { turbo_confirm: '本当に削除しますか？' }}  %>
+  <% end %>
+  <div class="user">
+    <%= @post.user.name %>
+    <%= image_tag @post.user.avatar.url, class: "rounded-circle", size: '50x50' %>
   </div>
 </div>
