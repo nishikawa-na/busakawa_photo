@@ -6,7 +6,8 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.includes(:user).find(params[:id])
+    @post = Post.includes(:user, :comments).find(params[:id])
+    @comment = Comment.new
   end
 
   def new
@@ -27,7 +28,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post = Post.find(params[:id])
+    @post = current_user.posts.find(params[:id])
     if @post.update(params_post)
       redirect_to post_path(@post)
     else
@@ -36,7 +37,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
+    @post = current_user.posts.find(params[:id])
     if @post.destroy
       redirect_to posts_path
     else

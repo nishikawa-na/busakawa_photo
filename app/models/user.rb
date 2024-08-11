@@ -7,4 +7,5 @@ class User < ApplicationRecord
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
   mount_uploader :avatar, UserAvatarUploader
   has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
 end

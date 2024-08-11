@@ -31,11 +31,23 @@
     <%= @post.body %>
   </div>
   <% if @post.user.id == current_user.id %>
-    <%= button_to t('.post_edit'), edit_post_path(@post.id), method: :get, class: "btn btn-info", data: { turbo: false } %>
-    <%= button_to t('.post_destroy'), post_path(@post), { method: :delete, class: "btn btn-danger", data: { turbo_confirm: '本当に削除しますか？' }}  %>
+    <%= link_to edit_post_path(@post.id) do %>
+      <i class="bi bi-pencil"></i>
+    <% end %>
+    <%= link_to post_path(@post), data: { turbo_method: "delete", turbo_confirm: "削除してよろしいですか？" } do %>
+      <i class="bi bi-trash"></i>
+    <% end %>
   <% end %>
   <div class="user">
     <%= @post.user.name %>
     <%= image_tag @post.user.avatar.url, class: "rounded-circle", size: '50x50' %>
+  </div>
+  <div class="comment">
+    <h5>コメント投稿</h5>
+      <%= render 'comments/comment_form', post: @post, comment: @comment %>
+    <h5>コメント一覧</h5>
+      <div id= "table-comment">
+        <%= render @post.comments %>
+      </div>
   </div>
 </div>

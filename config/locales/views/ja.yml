@@ -24,9 +24,6 @@ ja:
   posts:
     new:
       push: 投稿
-    show:
-      post_edit: 編集
-      post_destroy: 削除
     edit:
       push: 編集
   views:
@@ -36,3 +33,6 @@ ja:
       previous: "&lsaquo; 前"
       next: "次 &rsaquo;"
       truncate: "..."
+  time:
+    formats:
+      default: "%m月%d日"
