@@ -15,3 +15,5 @@ ja:
         title: タイトル
         body: 説明
         images: 画像
+      comment:
+        body: コメント

@@ -5,6 +5,7 @@ class Post < ApplicationRecord
   validates :images, presence: true
   validate :check_count
   mount_uploaders :images, PostPhotoUploader
+  has_many :comments, dependent: :destroy
 
   def check_count
     limit = 10
