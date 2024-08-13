@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :users
   resources :posts, shallow: true do
     resources :comments, only: %i[create destroy]
+    resources :like_posts, only: %i[create destroy]
   end
   # Defines the root path route ("/")
   # root "posts#index"

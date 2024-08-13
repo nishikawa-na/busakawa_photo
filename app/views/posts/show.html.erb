@@ -30,6 +30,9 @@
   <div class= "post_body">
     <%= @post.body %>
   </div>
+  <div class= "like_post_count">
+    <%= "いいね数 #{@post.like_posts.count}" %>
+  </div>
   <% if @post.user.id == current_user.id %>
     <%= link_to edit_post_path(@post.id) do %>
       <i class="bi bi-pencil"></i>
