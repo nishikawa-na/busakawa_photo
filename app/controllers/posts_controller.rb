@@ -2,11 +2,11 @@ class PostsController < ApplicationController
   skip_before_action :require_login, only: %i[index]
 
   def index
-    @posts = Post.includes(:user).order("created_at DESC").page(params[:page])
+    @posts = Post.includes(:user, :like_posts).order("created_at DESC").page(params[:page])
   end
 
   def show
-    @post = Post.includes(:user, :comments).find(params[:id])
+    @post = Post.includes(:user, :comments, :like_posts).find(params[:id])
     @comment = Comment.new
   end
 

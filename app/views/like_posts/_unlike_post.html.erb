@@ -1,0 +1,5 @@
+<div id= "like_post-<%= post.id %>">
+  <%= link_to post_like_posts_path(post), data: { turbo_method: "post" } do %>
+    <i class="bi bi-heart"></i>
+  <% end %> 
+</div>
