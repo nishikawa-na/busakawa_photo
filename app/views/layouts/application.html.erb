@@ -11,6 +11,9 @@
   </head>
 
   <body>
+    <div class= "header" %>
+      <%= check_login %>
+    </div>
     <%= yield %>
     <div class= "footer">
       <%= link_to 'お問い合わせ', inquiry_path %>

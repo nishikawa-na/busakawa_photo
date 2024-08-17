@@ -1,0 +1,16 @@
+<h1>投稿一覧</h1>
+<div class="container">
+  <div class="row">
+    <% @posts.each do |post| %>
+      <div class="border border-info col-xs-6 col-sm-4 col-md-3">
+        <%= link_to post_path(post), class: "post_show" do %>
+          <%= image_tag post.images[0].url, size: '200x200' %>
+          <div class="title">
+            <%= post.title %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= paginate @posts %>

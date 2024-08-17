@@ -3,5 +3,3 @@
 <%= image_tag @user.avatar.url %>
 
 <%= link_to t('.account_information_change'), edit_user_path %>
-<%= link_to "ユーザーアカウント削除", user_path(@user.id), data: { turbo_method: :delete, turbo_confirm: "削除しますか？" } %>
-<%= link_to "ログアウト", logout_path, data: { turbo_method: :delete, turbo_confirm: "ログアウトしますか？" } %>

@@ -32,6 +32,15 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
+  def post
+    @posts = current_user.posts.all.order("created_at DESC").page(params[:page])
+  end
+
+  def like_post
+    @posts = Post.joins(:like_posts).where(like_posts: { user_id: current_user.id }).order("like_posts.created_at DESC").page(params[:page])
+  end
+
+
   private
 
   def params_user
