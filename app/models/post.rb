@@ -14,4 +14,13 @@ class Post < ApplicationRecord
       errors.add(:post, "画像は#{limit}枚まで投稿可能です")
     end
   end
+
+  def self.ransackable_attributes(auth_object = nil)
+    ["title", "body"]
+  end
+
+  def self.ransackable_associations(auth_object = nil)
+    []
+  end
+
 end
