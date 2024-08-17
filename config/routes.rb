@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'
   delete 'logout', to: 'user_sessions#destroy'
+  get 'user/:id/posts', to: 'users#post', as: :user_posts
+  get 'user/:id/like_posts', to: 'users#like_post' , as: :user_like_posts
   resources :users
   resources :posts, shallow: true do
     resources :comments, only: %i[create destroy]
