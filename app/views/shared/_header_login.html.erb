@@ -12,10 +12,10 @@
           <%= link_to "投稿", new_post_path, class: "nav-link active" %>
         </li>
         <li class="nav-item">
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+          <%= search_form_for @q, url: posts_path, class: "d-flex" do |form| %>
+            <%= form.search_field :title_or_body_cont, class: "form-control me-2" %>
+            <%= form.submit '検索', class: "btn btn-outline-success" %>
+          <% end %>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
