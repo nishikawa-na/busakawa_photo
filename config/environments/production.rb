@@ -94,6 +94,7 @@ Rails.application.configure do
   # ]
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+  config.action_mailer.default_url_options = { protocol: 'https', host:'https://busakawa-photo.onrender.com'}
 
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
