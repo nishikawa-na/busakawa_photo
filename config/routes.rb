@@ -18,6 +18,10 @@ Rails.application.routes.draw do
     resources :comments, only: %i[create destroy]
     resources :like_posts, only: %i[create destroy]
   end
+  resources :password_resets, only: [:new, :create, :edit, :update]
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
   # Defines the root path route ("/")
   # root "posts#index"
 end
