@@ -14,6 +14,7 @@
     <div class= "header" %>
       <%= check_login %>
     </div>
+    <%= render 'shared/flash' %>
     <%= yield %>
     <div class= "footer">
       <%= link_to 'お問い合わせ', inquiry_path %>
