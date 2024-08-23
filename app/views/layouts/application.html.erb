@@ -16,10 +16,12 @@
     </div>
     <%= render 'shared/flash' %>
     <%= yield %>
-    <div class= "footer">
-      <%= link_to 'お問い合わせ', inquiry_path %>
-      <%= link_to '利用規約', terms_path %>
-      <%= link_to 'プライバシーポリシー', policy_path %>
-    </div>
+    <footer class="footer">
+      <div class="d-flex justify-content-around">
+        <%= link_to 'お問い合わせ', inquiry_path, class: "fotter_link" %>
+        <%= link_to '利用規約', terms_path, class: "fotter_link" %>
+        <%= link_to 'プライバシーポリシー', policy_path, class: "fotter_link" %>
+      </div>
+    </footer>
   </body>
 </html>
