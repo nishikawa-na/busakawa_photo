@@ -1,5 +1,16 @@
-<h1 class= "text-primary">ぶさかわフォト</h1>
-<p>あなたの好きなブサかわが見つかる</p>
-<%= link_to t('.sign up'), new_user_path %>
-<%= link_to t('.login'), login_path %>
-<%= link_to t('.guest'), posts_path %>
+<div class="container">
+  <div class="row w-100">
+    <div class="col-md-6">
+      <h1>ぶさかわフォト</h1>
+      <h3>あなたの好きなブサかわが見つかる</h3>
+        <div class="d-flex justify-content-around fs-3" >
+          <%= link_to t('.sign up'), new_user_path %>
+          <%= link_to t('.login'), login_path %>
+          <%= link_to t('.guest'), posts_path %>
+        </div>
+    </div>
+    <div class="col-md-6" %>
+      <%= image_tag 'top_photo', class: 'img-fluid' %>
+    </div>
+  </div>
+</div>

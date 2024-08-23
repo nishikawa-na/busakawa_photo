@@ -1,3 +1,14 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
 @import 'header';
+@import 'footer';
+
+
+.container {
+  height: 80vh;
+  display: flex;
+}
+
+.password_reset{
+text-decoration: none;
+}
