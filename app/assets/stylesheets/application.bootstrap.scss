@@ -5,10 +5,14 @@
 
 
 .container {
-  height: 80vh;
+  height: auto;
+  min-height: 80vh;
   display: flex;
 }
 
 .password_reset{
 text-decoration: none;
+}
+.row{
+  height: auto;
 }

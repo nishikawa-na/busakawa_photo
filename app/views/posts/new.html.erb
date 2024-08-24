@@ -1,15 +1,19 @@
-<h1>投稿作成</h1>
-<%= form_with model: @post do |form| %>
-  <%= render 'shared/error_messages', object: form.object %>
-  <%= form.label :title %>
-  <%= form.text_field :title %>
-
-  <%= form.label :body %>
-  <%= form.text_area :body %>
-
-  <%= form.label :images %>
-  <%= form.file_field :images, multiple: true %>
-  <%= form.hidden_field :images_cache %>
-
-  <%= form.submit t('.push') %>
-<% end %>
+<div class="container">
+  <div class="row w-100">
+    <h1>投稿作成</h1>
+    <%= form_with model: @post do |form| %>
+      <%= render 'shared/error_messages', object: form.object %>
+      <%= form.label :title, class: "form-label" %>
+      <%= form.text_field :title, class: "form-control" %>
+    
+      <%= form.label :body, class: "form-label" %>
+      <%= form.text_area :body, class: "form-control" %>
+    
+      <%= form.label :images, class: "form-label" %>
+      <%= form.file_field :images, multiple: true, class: "form-control" %>
+      <%= form.hidden_field :images_cache %>
+    
+      <%= form.submit t('.push'), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
