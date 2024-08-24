@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row w-100">
-<h1>いいね投稿一覧</h1>
+    <h1>いいね投稿一覧</h1>
     <% @posts.each do |post| %>
       <div class="col-xs-12 col-sm-4 col-md-3 border border-info">
         <%= link_to post_path(post), class: "post_show" do %>
