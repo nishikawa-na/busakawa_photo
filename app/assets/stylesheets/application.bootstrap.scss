@@ -11,8 +11,20 @@
 }
 
 .password_reset{
-text-decoration: none;
+  text-decoration: none;
 }
-.row{
+
+.img-fluid{
+  max-width: 100%;
   height: auto;
 }
+
+.carousel-item{
+  text-align: center;
+}
+
+.carousel-control-prev-icon,.carousel-control-next-icon {
+  background-color: gray;
+}
+
+
