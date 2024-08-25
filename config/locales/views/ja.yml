@@ -38,3 +38,9 @@ ja:
   time:
     formats:
       default: "%m月%d日"
+  password_resets:
+    new:
+      email: メールアドレス
+      push: 送信
+    edit:
+      push: 送信
