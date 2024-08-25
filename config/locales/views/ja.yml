@@ -15,7 +15,7 @@ ja:
       account_information_change: アカウント情報変更はこちら
   user_sessions:
     new:
-      name: 愛犬名
+      email: メールアドレス
       password: パスワード
       push: ログイン
   static_pages:

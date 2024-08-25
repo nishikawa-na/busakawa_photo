@@ -2,8 +2,8 @@
   <div class="row w-100">
     <h1>ログインページ</h1>
     <%= form_with url: login_path do |form| %>
-      <%= form.label t('.name'), class: "form-label" %>
-      <%= form.text_field :name, class: "form-control" %>
+      <%= form.label t('.email'), class: "form-label" %>
+      <%= form.text_field :email, class: "form-control" %>
       <%= form.label t('.password'), class: "form-label" %>
       <%= form.password_field :password, class: "form-control" %>
       <%= form.submit t('.push'), class: "btn btn-primary" %>
