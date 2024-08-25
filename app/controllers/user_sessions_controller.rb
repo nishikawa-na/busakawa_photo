@@ -3,7 +3,7 @@ class UserSessionsController < ApplicationController
   def new; end
 
   def create
-    if login(params[:name],params[:password])
+    if login(params[:email],params[:password])
       flash[:notice] = "ログインしました"
       redirect_to posts_path
     else
