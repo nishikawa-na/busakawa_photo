@@ -9,7 +9,7 @@
     <% end %>
   <% else %>
     <%= comment.user.name %>
-    <%= image_tag comment.user.avatar.url, size: '50x50' %>
+    <%= image_tag comment.user.avatar.url, class: "rounded-circle", size: '50x50' %>
     <%= comment.body %>
     <%= l comment.created_at %>
   <% end %>

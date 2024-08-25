@@ -1,56 +1,59 @@
-<h1>投稿詳細</h1>
-<div class="border border-info col-xs-6 col-sm-4 col-md-3">
-  <div id="carouselExampleIndicators" class="carousel slide">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+<div class="container">
+  <div class="row">
+    <h1>投稿詳細</h1>
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      </div>
+      <div class="carousel-inner">
+        <% @post.images.each_with_index do |image, index| %>
+          <div class="carousel-item <%= 'active' if index == 0 %>">
+            <%= image_tag image.url, size: '250x250' %>
+          </div>
+        <% end %>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <div class="carousel-inner">
-      <% @post.images.each_with_index do |image, index| %>
-        <div class="carousel-item <%= 'active' if index == 0 %>">
-          <%= image_tag image.url, class: "d-block w-100" %>
-        </div>
+    <div class="row">
+    <div class="title">
+      <h2><%= @post.title %></h2>
+    </div>
+    <div class= "post_body">
+      <p><%= @post.body %></p>
+    </div>
+    <div class="d-flex justify-content-end gap-1">
+      <%= "いいね数 #{@post.like_posts.count}" %>
+      <% if @post.user.id == current_user.id %>
+        <%= link_to edit_post_path(@post.id) do %>
+          <i class="bi bi-pencil"></i>
+        <% end %>
+        <%= link_to post_path(@post), data: { turbo_method: "delete", turbo_confirm: "削除してよろしいですか？" } do %>
+          <i class="bi bi-trash"></i>
+        <% end %>
       <% end %>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  <div class="title">
-    <%= @post.title %>
-  </div>
-  <div class= "post_body">
-    <%= @post.body %>
-  </div>
-  <div class= "like_post_count">
-    <%= "いいね数 #{@post.like_posts.count}" %>
-  </div>
-  <% if @post.user.id == current_user.id %>
-    <%= link_to edit_post_path(@post.id) do %>
-      <i class="bi bi-pencil"></i>
-    <% end %>
-    <%= link_to post_path(@post), data: { turbo_method: "delete", turbo_confirm: "削除してよろしいですか？" } do %>
-      <i class="bi bi-trash"></i>
-    <% end %>
-  <% end %>
-  <div class="user">
-    <%= @post.user.name %>
-    <%= image_tag @post.user.avatar.url, class: "rounded-circle",size: '50x50' %>
-  </div>
-  <div class="comment">
-    <h5>コメント投稿</h5>
-      <%= render 'comments/comment_form', post: @post, comment: @comment %>
-    <h5>コメント一覧</h5>
-      <div id= "table-comment">
-        <%= render @post.comments %>
-      </div>
+    <div class="user">
+      <%= @post.user.name %>
+      <%= image_tag @post.user.avatar.url, class: "rounded-circle",size: '50x50' %>
+    </div>
+    <div class="comment">
+        <%= render 'comments/comment_form', post: @post, comment: @comment %>
+      <h5>コメント一覧</h5>
+        <div id= "table-comment">
+          <%= render @post.comments %>
+        </div>
+    </div>
+    </div>
   </div>
 </div>
