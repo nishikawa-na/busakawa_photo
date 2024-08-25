@@ -4,7 +4,7 @@
     <% @posts.each do |post| %>
       <div class="col-xs-12 col-sm-4 col-md-3 border border-info">
         <%= link_to post_path(post), class: "post_show" do %>
-          <%= image_tag post.images[0].url, size: '200x200' %>
+          <%= image_tag post.images[0].url, class: "d-block w-100" %>
           <div class="title">
             <%= post.title %>
           </div>
