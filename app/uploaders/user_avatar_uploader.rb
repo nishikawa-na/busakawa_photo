@@ -1,7 +1,6 @@
 class UserAvatarUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
   if Rails.env.development?
@@ -42,7 +41,6 @@ class UserAvatarUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   # version :thumb do
-  #   process resize_to_fit: [50, 50]
   # end
 
   # Add an allowlist of extensions which are allowed to be uploaded.

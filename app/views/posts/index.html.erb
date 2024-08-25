@@ -4,7 +4,7 @@
     <% @posts.each do |post| %>
       <div class="col-xs-12 col-sm-4 col-md-3 border border-info">
         <%= link_to post_path(post), class: "post_show" do %>
-          <%= image_tag post.images[0].url, class: "img-responsive", size: "200x200" %>
+          <%= image_tag post.images[0].url, class: "d-block w-100" ,size: '200x200'%>
           <div class="title">
             <%= post.title %>
           </div>
@@ -14,7 +14,7 @@
         </div>
         <div class="user">
           <%= post.user.name %>
-          <%= image_tag post.user.avatar.url, class: "rounded-circle", size: '50x50' %>
+          <%= image_tag post.user.avatar.url, class: "rounded-circle",size: '50x50' %>
         </div>
       </div>
     <% end %>
