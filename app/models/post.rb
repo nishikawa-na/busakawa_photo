@@ -7,6 +7,7 @@ class Post < ApplicationRecord
   mount_uploaders :images, PostPhotoUploader
   has_many :comments, dependent: :destroy
   has_many :like_posts, dependent: :destroy
+  has_many :post_counts, dependent: :destroy
 
   def check_count
     limit = 10

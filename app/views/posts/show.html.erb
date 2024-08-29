@@ -33,6 +33,7 @@
       <p><%= @post.body %></p>
     </div>
     <div class="d-flex justify-content-end gap-1">
+      <%= "閲覧数 #{@post.post_counts.count}" %>
       <%= "いいね数 #{@post.like_posts.count}" %>
       <% if @post.user.id == current_user.id %>
         <%= link_to edit_post_path(@post.id) do %>
