@@ -32,10 +32,7 @@
     <div class= "post_body">
       <p><%= @post.body %></p>
     </div>
-    <div class="d-flex justify-content-end gap-2">
-      <div id= "like_post-<%= @post.id %>">
-        <%= render 'like_posts/like_button', post: @post %>
-      </div>
+    <div class="d-flex justify-content-end gap-1">
       <%= "閲覧数 #{@post.post_counts.count}" %>
       <%= "いいね数 #{@post.like_posts.count}" %>
       <% if @post.user.id == current_user.id %>
