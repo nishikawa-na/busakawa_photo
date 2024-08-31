@@ -13,7 +13,11 @@ Rails.application.routes.draw do
   delete 'logout', to: 'user_sessions#destroy'
   get 'user/:id/posts', to: 'users#post', as: :user_posts
   get 'user/:id/like_posts', to: 'users#like_post' , as: :user_like_posts
-  resources :users
+  resources :users do
+    resource :relationships, only: [:create, :destroy]
+      get "followings" => "relationships#followings", as: "followings"
+      get "followers" => "relationships#followers", as: "followers"
+  end
   resources :posts, shallow: true do
     resources :comments, only: %i[create destroy]
     resources :like_posts, only: %i[create destroy]

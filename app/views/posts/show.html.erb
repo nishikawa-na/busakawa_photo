@@ -48,6 +48,7 @@
       <%= @post.user.name %>
       <%= image_tag @post.user.avatar.url, class: "rounded-circle",size: '50x50' %>
     </div>
+    <%= render 'relationships/relationship_button', user: @post.user %>
     <div class="comment">
         <%= render 'comments/comment_form', post: @post, comment: @comment %>
       <h5>コメント一覧</h5>

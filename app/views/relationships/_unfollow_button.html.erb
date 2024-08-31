@@ -1,0 +1,3 @@
+<div id= "relationship-<%= user.id %>">
+  <%= link_to "フォロー", user_relationships_path(user), data: {turbo_method: :post}, class: "btn btn-outline-primary" %>
+</div>

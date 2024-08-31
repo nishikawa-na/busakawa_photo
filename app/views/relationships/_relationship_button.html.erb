@@ -1,0 +1,5 @@
+<% if current_user.followings.include?(user) %>
+  <%= render 'relationships/follow_button', user: user %>
+<% else %>
+  <%= render 'relationships/unfollow_button', user: user %>
+<% end %>
