@@ -1,0 +1,3 @@
+<div id= "relationship-<%= user.id %>">
+  <%= link_to "フォロー解除", user_relationships_path(user), data: {turbo_method: :delete}, class: "btn btn-outline-danger" %>
+</div>

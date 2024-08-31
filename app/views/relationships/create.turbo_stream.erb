@@ -1,0 +1,3 @@
+<%= turbo_stream.replace "relationship-#{@user.id}" do %>
+  <%= render 'relationships/follow_button', user: @user %>
+<% end %>
