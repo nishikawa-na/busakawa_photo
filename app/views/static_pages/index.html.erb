@@ -7,6 +7,7 @@
           <%= link_to t('.sign up'), new_user_path %>
           <%= link_to t('.login'), login_path %>
           <%= link_to t('.guest'), posts_path %>
+          <%= link_to 'Login with LINE', auth_at_provider_path(:provider => :line) %>
         </div>
     </div>
     <div class="col-md-6" %>

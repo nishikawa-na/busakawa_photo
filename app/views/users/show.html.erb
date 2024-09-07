@@ -3,7 +3,6 @@
       <%= image_tag @user.avatar.url, size: '300x300' %>
       <ul class="list-group list-group-flush">
         <li class="list-group-item"><%= @user.name %></li>
-        <li class="list-group-item"><%= @user.email %></li>
         <li class="list-group-item"><%= link_to t('.account_information_change'), edit_user_path %></li>
       </ul>
     </div>

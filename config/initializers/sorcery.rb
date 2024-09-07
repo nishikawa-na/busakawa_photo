@@ -4,7 +4,7 @@
 # Available submodules are: :user_activation, :http_basic_auth, :remember_me,
 # :reset_password, :session_timeout, :brute_force_protection, :activity_logging,
 # :magic_login, :external
-Rails.application.config.sorcery.submodules = [:reset_password]
+Rails.application.config.sorcery.submodules = [:reset_password, :external]
 
 # Here you can configure each submodule's features.
 Rails.application.config.sorcery.configure do |config|
@@ -80,7 +80,7 @@ Rails.application.config.sorcery.configure do |config|
   # i.e. [:twitter, :facebook, :github, :linkedin, :xing, :google, :liveid, :salesforce, :slack, :line].
   # Default: `[]`
   #
-  # config.external_providers =
+  config.external_providers = %i[line]
 
   # You can change it by your local ca_file. i.e. '/etc/pki/tls/certs/ca-bundle.crt'
   # Path to ca_file. By default use a internal ca-bundle.crt.
@@ -218,14 +218,16 @@ Rails.application.config.sorcery.configure do |config|
   # config.salesforce.callback_url = "https://127.0.0.1:9292/oauth/callback?provider=salesforce"
   # config.salesforce.scope = "full"
   # config.salesforce.user_info_mapping = {:email => "email"}
-
-  # config.line.key = ""
-  # config.line.secret = ""
-  # config.line.callback_url = "http://mydomain.com:3000/oauth/callback?provider=line"
-  # config.line.scope = "profile"
-  # config.line.bot_prompt = "normal"
-  # config.line.user_info_mapping = {name: 'displayName'}
-
+  config.line.key = Rails.application.credentials.dig(:line, :channel_id)
+  config.line.secret = Rails.application.credentials.dig(:line, :channel_secret)
+  config.line.callback_url = if Rails.env.production?
+                                'https://busakawa.com/oauth/callback?provider=line'
+                              else
+                                'https://localhost:3001/oauth/callback?provider=line'
+                              end
+  config.line.scope = "profile"
+  config.line.bot_prompt = "normal"
+  config.line.user_info_mapping = {name: 'displayName', email: 'userId'}
   
   # For information about Discord API
   # https://discordapp.com/developers/docs/topics/oauth2
@@ -543,7 +545,7 @@ Rails.application.config.sorcery.configure do |config|
     # Class which holds the various external provider data for this user.
     # Default: `nil`
     #
-    # user.authentications_class =
+    user.authentications_class = Authentication
 
     # User's identifier in the `authentications` class.
     # Default: `:user_id`
