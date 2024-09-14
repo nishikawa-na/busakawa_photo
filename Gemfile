@@ -70,6 +70,10 @@ group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
 
   gem 'letter_opener_web', '~> 3.0'
+
+  gem 'rubocop', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
 end
 
 group :development do
