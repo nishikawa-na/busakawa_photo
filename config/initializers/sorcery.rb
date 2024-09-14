@@ -222,12 +222,10 @@ Rails.application.config.sorcery.configure do |config|
   config.line.secret = Rails.application.credentials.dig(:line, :channel_secret)
   config.line.callback_url = if Rails.env.production?
                                 'https://busakawa.com/oauth/callback?provider=line'
-                              else
-                                'https://localhost:3001/oauth/callback?provider=line'
                               end
   config.line.scope = "profile"
-  config.line.bot_prompt = "normal"
-  config.line.user_info_mapping = {name: 'displayName', email: 'userId'}
+  config.line.bot_prompt = "aggressive"
+  config.line.user_info_mapping = {name: 'displayName', email: 'userId', line_user_id: 'userId'}
   
   # For information about Discord API
   # https://discordapp.com/developers/docs/topics/oauth2

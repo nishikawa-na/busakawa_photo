@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  require 'line/bot'
   skip_before_action :require_login, only: %i[index]
 
   def index; end
@@ -18,6 +19,15 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(params_post)
     if @post.save
+      followers = current_user.followers
+      followers.each do |follower|
+        message = [
+            {type: "text", text: "ぶさかわフォトです"},
+            {type: "text", text: "#{current_user.name}さんが新たに投稿しました。確認してみましょう!"},
+            {type: "text", text: "URL貼る"}
+          ]
+          client.push_message(follower.line_user_id, message)
+      end
       flash[:notice] = "投稿作成しました"
       redirect_to posts_path
     else
@@ -56,6 +66,14 @@ class PostsController < ApplicationController
 
   def params_post
     params.require(:post).permit(:title, :body, :images_cache, {images: []}).merge(user_id: current_user.id)
+  end
+
+  def client
+    @client ||= Line::Bot::Client.new { |config|
+      config.channel_id = ENV["LINE_CHANNEL_ID"]
+      config.channel_secret = ENV["LINE_CHANNEL_SECRET"]
+      config.channel_token = ENV["LINE_CHANNEL_TOKEN"]
+    }
   end
 
 end

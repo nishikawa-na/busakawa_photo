@@ -14,7 +14,7 @@ class UsersController < ApplicationController
       if @user.save
         auto_login(@user)
         flash[:notice] = "アカウント作成しました"
-        redirect_to posts_path
+        redirect_to line_official_path
       else
         flash.now[:alert] ="アカウント作成に失敗しました"
         render :new, status: :unprocessable_entity
@@ -44,7 +44,6 @@ class UsersController < ApplicationController
   def like_post
     @posts = Post.includes(:user, :like_posts).where(like_posts: { user_id: current_user.id }).order("like_posts.created_at DESC").page(params[:page])
   end
-
 
   private
 

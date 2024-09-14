@@ -183,6 +183,7 @@ GEM
       letter_opener (~> 1.9)
       railties (>= 6.1)
       rexml
+    line-bot-api (1.29.0)
     logger (1.6.0)
     loofah (2.22.0)
       crass (~> 1.0.2)
@@ -366,6 +367,7 @@ DEPENDENCIES
   jsbundling-rails
   kaminari
   letter_opener_web (~> 3.0)
+  line-bot-api
   mini_magick
   pg (~> 1.1)
   pry-byebug
