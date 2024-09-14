@@ -91,10 +91,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_09_14_084850) do
     t.datetime "reset_password_token_expires_at"
     t.datetime "reset_password_email_sent_at"
     t.integer "access_count_to_reset_password_page", default: 0
-    t.string "line_registration_token"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["instagram_account_url"], name: "index_users_on_instagram_account_url", unique: true
-    t.index ["line_registration_token"], name: "index_users_on_line_registration_token"
     t.index ["line_user_id"], name: "index_users_on_line_user_id", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token"
   end

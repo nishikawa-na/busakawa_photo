@@ -23,6 +23,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><%= link_to "ユーザー情報", user_path(current_user), class: "dropdown-item" %></li>
+            <li><%= link_to "公式LINE", line_official_path, class: "dropdown-item" %></li>
             <li><%= link_to "パスワード変更", new_password_reset_path, class: "dropdown-item" %></li>
             <li><%= link_to "投稿一覧", user_posts_path(current_user), class: "dropdown-item" %></li>
             <li><%= link_to "いいね一覧", user_like_posts_path(current_user), class: "dropdown-item" %></li>
