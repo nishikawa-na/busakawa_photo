@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   post "oauth/callback" => "oauths#callback"
   get "oauth/callback" => "oauths#callback"
   get "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
+  resources :line_bots, only: %i[new create]
+  get "line_official" => "line_bots#official"
+  post "line_bot/webhook" => "line_bots#webhook"
   resources :users do
     resource :relationships, only: [:create, :destroy]
       get "followings" => "relationships#followings", as: "followings"

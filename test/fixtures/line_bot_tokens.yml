@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  line_user_id: MyString
+  line_user_id_token: MyString
+
+two:
+  line_user_id: MyString
+  line_user_id_token: MyString
