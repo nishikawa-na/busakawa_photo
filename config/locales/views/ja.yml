@@ -25,7 +25,7 @@ ja:
       guest: ゲスト
   posts:
     new:
-      push: 投稿
+      push: 投稿する
     edit:
       push: 編集
   views:

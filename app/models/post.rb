@@ -10,7 +10,7 @@ class Post < ApplicationRecord
   has_many :post_counts, dependent: :destroy
 
   def check_count
-    limit = 10
+    limit = 5
     if images.length >= limit
       errors.add(:post, "画像は#{limit}枚まで投稿可能です")
     end
