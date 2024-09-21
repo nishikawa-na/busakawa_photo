@@ -4,6 +4,6 @@ module LoginModule
     fill_in "email", with: user.email
     fill_in "password", with: "12345"
     click_button "ログイン"
-    expect(current_path).to eq posts_path
+    expect(page).to have_text "ログインしました"
   end
 end

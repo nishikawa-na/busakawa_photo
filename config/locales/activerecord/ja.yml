@@ -5,7 +5,7 @@ ja:
   ##カラム名を対応させるときはattributesの階層を作って日本語化にする文字を記入
     attributes:
       user:
-        name: 愛犬名
+        name: ペット名
         email: メールアドレス
         avatar: プロフィール画像
         password: パスワード
