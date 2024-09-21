@@ -6,3 +6,4 @@ Capybara.register_driver :remote_chrome do |app|
   options.add_argument('window-size=1680,1050')
   Capybara::Selenium::Driver.new(app, browser: :remote, url: ENV['SELENIUM_DRIVER_URL'], capabilities: options)
 end
+Capybara.javascript_driver = :remote_chrome

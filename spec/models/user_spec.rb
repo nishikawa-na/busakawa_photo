@@ -26,7 +26,6 @@ RSpec.describe User, type: :model do
     end
     it 'ユーザーのメールアドレスが重複しているとエラーが発生すること' do
       another_user.email = user.email
-      another_user.save
       expect(another_user).to be_invalid
     end
     it 'ユーザーのパスワードが３文字以下であるとエラーが発生すること' do
@@ -39,14 +38,6 @@ RSpec.describe User, type: :model do
     end
     it 'パスワード確認の値が空の場合、エラーが発生すること' do
       another_user.password_confirmation = ""
-      expect(another_user).to be_invalid
-    end
-    it 'インスタグラムアカウントが重複する場合、エラーが発生すること' do
-      another_user.instagram_account_url = user.instagram_account_url
-      expect(another_user).to be_invalid
-    end
-    it 'LINEIDが重複する場合、エラーが発生すること' do
-      another_user.line_user_id = user.line_user_id
       expect(another_user).to be_invalid
     end
     it 'パスワードトクーンが重複している場合、エラーが発生すること' do

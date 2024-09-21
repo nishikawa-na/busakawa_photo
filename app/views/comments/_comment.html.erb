@@ -4,7 +4,7 @@
     <%= image_tag comment.user.avatar.url, size: '50x50' %>
     <%= comment.body %>
     <%= l comment.created_at %>
-    <%= link_to comment_path(comment), data: { turbo_method: "delete", turbo_confirm: "削除してよろしいですか？" } do %>
+    <%= link_to comment_path(comment), data: { turbo_method: "delete", turbo_confirm: "削除してよろしいですか？" }, class: "comment-delete" do %>
       <i class="bi bi-trash"></i>
     <% end %>
   <% else %>
