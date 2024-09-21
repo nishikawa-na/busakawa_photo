@@ -7,7 +7,7 @@ class OauthsController < ApplicationController
   def callback
     provider = auth_params[:provider]
     if (@user = login_from(provider))
-      redirect_to root_path, notice: "#{provider.titleize}でログインしました"
+      redirect_to posts_path, notice: "#{provider.titleize}でログインしました"
     else
       begin
         @user = create_from(provider)

@@ -54,4 +54,17 @@ RSpec.describe "Users", type: :system do
       expect(page).to have_content post_one.title
     end
   end
+  describe "like_postアクション" do
+    let(:user) { create(:user) }
+    let!(:post) { create(:post, title: "表示されないテストタイトル") }
+    let!(:like_post) { create(:like_post, post: post) }
+    let!(:current_user_like_post) { create(:like_post, user: user)}
+    it "ログインユーザーのいいねした投稿一覧" do
+      login(user)
+      click_link "ユーザー情報"
+      click_link "いいね一覧"
+      expect(page).to have_link current_user_like_post.post.title
+      expect(page).not_to have_link like_post.post.title
+    end
+  end 
 end
