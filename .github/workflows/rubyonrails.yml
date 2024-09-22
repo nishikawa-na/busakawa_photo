@@ -93,9 +93,9 @@ jobs:
           POSTGRES_DB: rails_test
     env:
       RAILS_ENV: test
-      POSTGRES_USER: leaf_whisper
-      POSTGRES_PASSWORD: pomchan1858
-      POSTGRES_DB: leaf_whisper_test
+      POSTGRES_USER: rails
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: rails_test
     steps:
       - name: Checkout code
         uses: actions/checkout@v2

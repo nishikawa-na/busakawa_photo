@@ -1,0 +1,7 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  username: rails
+  password: password
+  pool: 5
