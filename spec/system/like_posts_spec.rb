@@ -18,7 +18,7 @@ RSpec.describe "LikePosts", type: :system do
   end
   describe "destroyアクション" do
     let(:user) { create(:user) }
-    let!(:post) { create(:post, user: user) }
+    let!(:post) { create(:post, user:) }
     it "destroyアクション実行時に一部のビューが変更されるか" do
       login(user)
       find(".bi.bi-heart").click
