@@ -195,17 +195,6 @@ jobs:
         with:
           ruby-version: 3.2.3
 
-      - name: Cache node modules
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Yarn install
-        run: yarn install --check-files
-
       - name: Setup bundler
         run: gem install bundler
 
