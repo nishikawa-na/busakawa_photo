@@ -178,9 +178,9 @@ jobs:
 
     env:
       RAILS_ENV: test
-          POSTGRES_USER: rails_test
-          POSTGRES_PASSWORD: password
-          POSTGRES_DB: myapp_test
+      POSTGRES_USER: rails_test
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: myapp_test
 
     steps:
       - name: Git checkout
