@@ -217,8 +217,8 @@ jobs:
       - name: Run RuboCop
         run: bundle exec rubocop
 
-      - name: Security audit dependencies
-        run: bin/bundler-audit --update
-
       - name: Security audit application code
         run: bin/brakeman -q -w2
+
+      - name: Security audit dependencies
+        run: bin/bundler-audit --update
