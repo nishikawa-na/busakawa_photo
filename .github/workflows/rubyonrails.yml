@@ -172,17 +172,17 @@ jobs:
         ports:
           - 5432:5432
         env:
-          POSTGRES_USER: rails_test
+          POSTGRES_USER: postgres
           POSTGRES_PASSWORD: password
           POSTGRES_DB: myapp_test
       chrome:
-              image: seleniarm/standalone-chromium:latest
-              ports:
-                - 4444:4444
+        image: seleniarm/standalone-chromium:latest
+        ports:
+          - 4444:4444
 
     env:
       RAILS_ENV: test
-      POSTGRES_USER: rails_test
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
       POSTGRES_DB: myapp_test
       SELENIUM_DRIVER_URL: http://chrome:4444/wd/hub

@@ -59,7 +59,7 @@ development:
 test:
   <<: *default
   database: myapp_test
-  username: rails_test
+  username: postgres
   password: password
   host: db
   port: 5432
