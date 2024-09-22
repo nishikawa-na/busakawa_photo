@@ -6,6 +6,3 @@ default: &default
   password: password
   pool: 5
   host: 127.0.0.1
-test:
-  <<: *default
-  database: myapp_test
