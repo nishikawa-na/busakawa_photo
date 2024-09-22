@@ -4,12 +4,13 @@
 #
 # This workflow will install a prebuilt Ruby version, install dependencies, and
 # run tests and linters.
-name: "Ruby on Rails CI"
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+
+#name: "Ruby on Rails CI"
+#on:
+#  push:
+#    branches: [ "main" ]
+#  pull_request:
+#    branches: [ "main" ]
 #jobs:
 #  test:
 #    runs-on: ubuntu-latest
@@ -79,25 +80,110 @@ on:
 #          bin/rails db:create db:schema:load
 #          bundle exec rspec
 
+#jobs:
+#  build:
+#    runs-on: ubuntu-latest
+#    services:
+#      postgres:
+#        image: postgres:11-alpine
+#        ports:
+#          - 5432:5432
+#        env:
+#          POSTGRES_USER: rails_test
+#          POSTGRES_PASSWORD: password
+#          POSTGRES_DB: myapp_test
+#    env:
+#      RAILS_ENV: test
+#      POSTGRES_USER: rails_test
+#      POSTGRES_PASSWORD: password
+#      POSTGRES_DB: myapp_test
+#    steps:
+#      - name: Checkout code
+#        uses: actions/checkout@v2
+#
+#      - name: Setup Ruby 3.2.3
+#        uses: ruby/setup-ruby@v1
+#        with:
+#          ruby-version: 3.2.3
+#
+#      - name: Setup bundler
+#        run: gem install bundler
+#
+#      - name: Cache gems
+#        uses: actions/cache@v2
+#        with:
+#          path: vendor/bundle
+#          key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
+#          restore-keys: |
+#            ${{ runner.os }}-gem-
+#
+#      - name: Install gems
+#        run: bundle install --path vendor/bundle --jobs 4
+#
+#      - name: Setup Database
+#        run: |
+#          cp -v config/database.yml.ci config/database.yml
+#          bundle exec rails db:create
+#          bundle exec rails db:schema:load
+#
+#      - name: Run RSpec tests
+#        run: bundle exec rspec
+#  lint:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout code
+#        uses: actions/checkout@v4
+#      - name: Install Ruby and gems
+#        uses: ruby/setup-ruby@78c01b705fd9d5ad960d432d3a0cfa341d50e410 # v1.179.1
+#        with:
+#          bundler-cache: true
+#      - name: Generate binstubs
+#        run: bundle binstubs bundler-audit brakeman rubocop
+#      # Add or replace any other lints here
+#      - name: Security audit application code
+#        run: bin/brakeman -q -w2
+#      - name: Run rubocop
+#        run: bundle exec rubocop
+#      - name: Security audit dependencies
+#        run: bin/bundler-audit --update
+
+
+
+
+#### kokkaraaaaaaaaaaa
+
+name: Rails CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     services:
       postgres:
-        image: postgres:11-alpine
+        image: postgres:latest
         ports:
           - 5432:5432
         env:
           POSTGRES_USER: rails_test
           POSTGRES_PASSWORD: password
           POSTGRES_DB: myapp_test
+
     env:
       RAILS_ENV: test
-      POSTGRES_USER: rails_test
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: myapp_test
+          POSTGRES_USER: rails_test
+          POSTGRES_PASSWORD: password
+          POSTGRES_DB: myapp_test
+
     steps:
-      - name: Checkout code
+      - name: Git checkout
         uses: actions/checkout@v2
 
       - name: Setup Ruby 3.2.3
@@ -127,21 +213,12 @@ jobs:
 
       - name: Run RSpec tests
         run: bundle exec rspec
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Install Ruby and gems
-        uses: ruby/setup-ruby@78c01b705fd9d5ad960d432d3a0cfa341d50e410 # v1.179.1
-        with:
-          bundler-cache: true
-      - name: Generate binstubs
-        run: bundle binstubs bundler-audit brakeman rubocop
-      # Add or replace any other lints here
-      - name: Security audit application code
-        run: bin/brakeman -q -w2
-      - name: Run rubocop
+
+      - name: Run RuboCop
         run: bundle exec rubocop
+
       - name: Security audit dependencies
         run: bin/bundler-audit --update
+
+      - name: Security audit application code
+        run: bin/brakeman -q -w2
