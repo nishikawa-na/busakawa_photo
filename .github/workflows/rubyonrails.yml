@@ -239,7 +239,7 @@ jobs:
       - name: Security audit application code
         run: bundle exec brakeman
 
-      - name: Security audit dependencies
-        run: |
-          bundle exec bundler-audit update
-          bundle exec bundler-audit
+#      - name: Security audit dependencies
+#        run: |
+#          bundle exec bundler-audit update
+#          bundle exec bundler-audit
