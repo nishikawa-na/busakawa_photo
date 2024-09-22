@@ -88,14 +88,14 @@ jobs:
         ports:
           - 5432:5432
         env:
-          POSTGRES_USER: rails
+          POSTGRES_USER: rails_test
           POSTGRES_PASSWORD: password
-          POSTGRES_DB: rails_test
+          POSTGRES_DB: myapp_test
     env:
       RAILS_ENV: test
-      POSTGRES_USER: rails
+      POSTGRES_USER: rails_test
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: rails_test
+      POSTGRES_DB: myapp_test
     steps:
       - name: Checkout code
         uses: actions/checkout@v2

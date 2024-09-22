@@ -2,6 +2,9 @@ default: &default
   adapter: postgresql
   encoding: unicode
   host: localhost
-  username: rails
+  username: rails_test
   password: password
   pool: 5
+test:
+  <<: *default
+  database: myapp_test
