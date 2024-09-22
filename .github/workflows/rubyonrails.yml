@@ -49,7 +49,7 @@ jobs:
         image: postgres:11-alpine
         env:
           POSTGRES_USER: rails
-    container:
+      container:
           POSTGRES_PASSWORD: password
           POSTGRES_DB: rails_test
         ports:
@@ -70,7 +70,6 @@ jobs:
           bundle install --jobs 4 --retry 3 --path vendor/bundle
       - name: Setup DB, Run tests
         env:
-          PGHOST: postgres
           PGUSER: postgres
           PGPORT: ${{ job.services.postgres.ports[5432] }}
           RAILS_ENV: test
