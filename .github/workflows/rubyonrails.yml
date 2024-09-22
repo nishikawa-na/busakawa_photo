@@ -185,7 +185,6 @@ jobs:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
       POSTGRES_DB: myapp_test
-      SELENIUM_DRIVER_URL: http://chrome:4444/wd/hub
 
     steps:
       - name: Git checkout
@@ -203,6 +202,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-node-
+
       - name: Yarn install
         run: yarn install --check-files
 
