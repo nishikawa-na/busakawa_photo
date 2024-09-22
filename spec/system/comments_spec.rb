@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "Comments", type: :system do
   describe "createアクション" do
     let!(:post) { create(:post) }
-    let(:comment) { create(:comment)}
+    let(:comment) { create(:comment) }
     it "createアクション後、コメントが表示されているか" do
       login(post.user)
       visit post_path(post)

@@ -11,7 +11,7 @@ RSpec.describe "UserSessions", type: :system do
       expect(page).to have_content('ログインに失敗しました')
       expect(current_path).to eq login_path
     end
-    it 'パスワードが異なる為、ログインできません'do
+    it 'パスワードが異なる為、ログインできません' do
       visit login_path
       fill_in "email", with: user.email
       fill_in "password", with: "11111"
