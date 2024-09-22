@@ -175,12 +175,17 @@ jobs:
           POSTGRES_USER: rails_test
           POSTGRES_PASSWORD: password
           POSTGRES_DB: myapp_test
+        chrome:
+                image: seleniarm/standalone-chromium:latest
+                ports:
+                  - 4444:4444
 
     env:
       RAILS_ENV: test
       POSTGRES_USER: rails_test
       POSTGRES_PASSWORD: password
       POSTGRES_DB: myapp_test
+      SELENIUM_DRIVER_URL: http://chrome:4444/wd/hub
 
     steps:
       - name: Git checkout
