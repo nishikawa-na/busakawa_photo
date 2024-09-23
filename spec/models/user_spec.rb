@@ -10,7 +10,7 @@ RSpec.describe User, type: :model do
       end
     end
 
-    it 'DB上にハッシュ化されたパスワードが存在していること'do
+    it 'DB上にハッシュ化されたパスワードが存在していること' do
       crypted_password = user.crypted_password
       expect(crypted_password).not_to be_empty
     end

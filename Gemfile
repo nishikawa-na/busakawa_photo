@@ -75,9 +75,9 @@ group :development, :test do
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
 
-  gem 'rspec-rails', '~> 7.0.0'
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'rspec-rails', '~> 7.0.0'
 end
 
 group :development do
@@ -94,8 +94,9 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem 'brakeman'
+  gem 'bundler-audit'
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-  gem 'bundler-audit'
 end

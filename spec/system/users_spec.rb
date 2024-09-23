@@ -7,7 +7,7 @@ RSpec.describe "Users", type: :system do
       visit root_path
       click_link "新規登録"
       fill_in "ペット名", with: user.name
-      attach_file "プロフィール画像" , "spec/fixtures/image/profile_test2.png"
+      attach_file "プロフィール画像", "spec/fixtures/image/profile_test2.png"
       fill_in "メールアドレス", with: user.email
       fill_in "パスワード", with: user.password
       fill_in "パスワード確認", with: user.password_confirmation
@@ -43,8 +43,8 @@ RSpec.describe "Users", type: :system do
   end
   describe "postsアクション" do
     let(:user) { create(:user) }
-    let!(:post) { create(:post, user: user) }
-    let!(:post_one) { create(:post, user: user, title: "テストタイトル2") }
+    let!(:post) { create(:post, user:) }
+    let!(:post_one) { create(:post, user:, title: "テストタイトル2") }
     let!(:post_not_current) { create(:post, title: "別ユーザーの投稿タイトル1") }
     it "ログインユーザーの投稿一覧表示" do
       login(user)
@@ -57,8 +57,8 @@ RSpec.describe "Users", type: :system do
   describe "like_postアクション" do
     let(:user) { create(:user) }
     let!(:post) { create(:post, title: "表示されないテストタイトル") }
-    let!(:like_post) { create(:like_post, post: post) }
-    let!(:current_user_like_post) { create(:like_post, user: user)}
+    let!(:like_post) { create(:like_post, post:) }
+    let!(:current_user_like_post) { create(:like_post, user:) }
     it "ログインユーザーのいいねした投稿一覧" do
       login(user)
       click_link "ユーザー情報"
@@ -66,5 +66,5 @@ RSpec.describe "Users", type: :system do
       expect(page).to have_link current_user_like_post.post.title
       expect(page).not_to have_link like_post.post.title
     end
-  end 
+  end
 end
