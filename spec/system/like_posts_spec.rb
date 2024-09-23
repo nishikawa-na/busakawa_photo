@@ -8,7 +8,7 @@ RSpec.describe "LikePosts", type: :system do
       login(user)
       find(".bi.bi-heart").click
       visit post_path(like_post.post.id)
-      expect(page).to have_content("いいね数 1")
+      expect(page).to have_content("いいね数 2")
     end
     it "createアクション実行時に一部のビューが変更されるか" do
       login(user)
