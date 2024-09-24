@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   delete 'logout', to: 'user_sessions#destroy'
   get 'user/:id/posts', to: 'users#post', as: :user_posts
   get 'user/:id/like_posts', to: 'users#like_post' , as: :user_like_posts
+  get "posts/search", to: 'posts#search'
   post "oauth/callback" => "oauths#callback"
   get "oauth/callback" => "oauths#callback"
   get "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider

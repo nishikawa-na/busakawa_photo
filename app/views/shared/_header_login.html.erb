@@ -13,7 +13,10 @@
         </li>
         <li class="nav-item">
           <%= search_form_for @q, url: posts_path, class: "d-flex" do |form| %>
-            <%= form.search_field :title_or_body_cont, class: "form-control me-2" %>
+            <div data-controller="autocomplete" data-autocomplete-url-value="/posts/search" role="combobox">
+              <%= form.search_field :title_cont, class: "form-control me-2", data: { autocomplete_target: 'input' } %>
+              <ul class="list-group" data-autocomplete-target="results"></ul>
+            </div>
             <%= form.submit '検索', class: "btn btn-outline-success" %>
           <% end %>
         </li>
