@@ -58,16 +58,16 @@ RSpec.describe "Posts", type: :system do
     let!(:user) { create(:user) }
     let!(:post) { create(:post, user:) }
     let!(:post_test) { build(:post, user:) }
-      it "オート検索機能が作動しているか" do
-        post_test.title = "カブトムシ"
-        post_test.save
-        login(user)
-        fill_in "q_title_cont", with: 'カ'
-        expect(page).to have_selector('li.list-group-item', text: 'カブトムシ')
-        click_button "検索"
-        expect(page).to have_content "カブトムシ"
-        expect(page).not_to have_content "テストタイトル"
-      end
+    it "オート検索機能が作動しているか" do
+      post_test.title = "カブトムシ"
+      post_test.save
+      login(user)
+      fill_in "q_title_cont", with: 'カ'
+      expect(page).to have_selector('li.list-group-item', text: 'カブトムシ')
+      click_button "検索"
+      expect(page).to have_content "カブトムシ"
+      expect(page).not_to have_content "テストタイトル"
+    end
   end
   let(:user) { create(:user) }
   let(:post) { create(:post) }
