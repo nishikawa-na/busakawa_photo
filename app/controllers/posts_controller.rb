@@ -62,6 +62,11 @@ class PostsController < ApplicationController
     end
   end
 
+  def search
+    @posts = Post.where("title like ?", "%#{params[:q]}%")
+    respond_to :js
+  end
+
   private
 
   def params_post
