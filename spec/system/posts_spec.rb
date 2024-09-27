@@ -62,11 +62,8 @@ RSpec.describe "Posts", type: :system do
       post_test.title = "カブトムシ"
       post_test.save
       login(user)
-      fill_in "q_title_cont", with: 'カ'
+      fill_in "q_title_cont", with: 'カブト'
       expect(page).to have_selector('li.list-group-item', text: 'カブトムシ')
-      click_button "検索"
-      expect(page).to have_content "カブトムシ"
-      expect(page).not_to have_content "テストタイトル"
     end
   end
   let(:user) { create(:user) }

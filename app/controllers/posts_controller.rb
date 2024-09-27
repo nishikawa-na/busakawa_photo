@@ -2,7 +2,9 @@ class PostsController < ApplicationController
   require 'line/bot'
   skip_before_action :require_login, only: %i[index]
 
-  def index; end
+  def index
+    @ranking_posts = Post.left_joins(:like_posts).includes(:user).group('posts.id').order('COUNT(like_posts.id) DESC').limit(4)
+  end
 
   def show
     @post = Post.includes(:user, :comments, :like_posts).find(params[:id])
