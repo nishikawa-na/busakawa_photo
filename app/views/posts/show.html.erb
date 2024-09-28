@@ -45,8 +45,13 @@
       <% end %>
     </div>
     <div class="user">
+      <%= image_tag @post.user.avatar.url, class: "rounded-circle", size: '50x50' %>
       <%= @post.user.name %>
-      <%= image_tag @post.user.avatar.url, class: "rounded-circle",size: '50x50' %>
+      <% if @post.user.instagram_account_url.present? %>
+        <%= link_to @post.user.instagram_account_url, target: :_blank, rel: "noopener noreferrer" do %>
+          <%= image_tag "Instagram_Glyph_Gradient.png", size: '40x40', class: "m-4" %>
+        <% end %>
+      <% end %>
     </div>
     <%= render 'relationships/relationship_button', user: @post.user %>
     <div class="comment">

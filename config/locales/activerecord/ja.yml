@@ -8,6 +8,7 @@ ja:
         name: ペット名
         email: メールアドレス
         avatar: プロフィール画像
+        instagram_account_url: InstagramアカウントURL
         password: パスワード
         password_confirmation: パスワード確認
       post:

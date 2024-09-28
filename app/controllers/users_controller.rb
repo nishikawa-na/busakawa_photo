@@ -48,7 +48,7 @@ class UsersController < ApplicationController
   private
 
   def params_user
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :avatar, :avatar_cache)
+    params.require(:user).permit(:name, :email, :instagram_account_url, :password, :password_confirmation, :avatar, :avatar_cache)
   end
 
   def set_user
