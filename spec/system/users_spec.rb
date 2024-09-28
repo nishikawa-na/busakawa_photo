@@ -9,7 +9,7 @@ RSpec.describe "Users", type: :system do
       fill_in "ペット名", with: user.name
       attach_file "プロフィール画像", "spec/fixtures/image/profile_test2.png"
       fill_in "メールアドレス", with: user.email
-      fill_in "InstagramアカウントURL", with:user.instagram_account_url
+      fill_in "InstagramアカウントURL", with: user.instagram_account_url
       fill_in "パスワード", with: user.password
       fill_in "パスワード確認", with: user.password_confirmation
       click_button "送信"
@@ -19,7 +19,6 @@ RSpec.describe "Users", type: :system do
       visit root_path
       click_link "新規登録"
       fill_in "ペット名", with: user.name
-      attach_file "プロフィール画像", "spec/fixtures/image/profile_test2.png"
       fill_in "InstagramアカウントURL", with: "https://www.instagram.com/"
       fill_in "メールアドレス", with: user.email
       fill_in "パスワード", with: user.password
@@ -31,7 +30,6 @@ RSpec.describe "Users", type: :system do
       visit root_path
       click_link "新規登録"
       fill_in "ペット名", with: user.name
-      attach_file "プロフィール画像", "spec/fixtures/image/profile_test2.png"
       fill_in "InstagramアカウントURL", with: "http://www.instagram.com/"
       fill_in "メールアドレス", with: user.email
       fill_in "パスワード", with: user.password
@@ -43,7 +41,6 @@ RSpec.describe "Users", type: :system do
       visit root_path
       click_link "新規登録"
       fill_in "ペット名", with: user.name
-      attach_file "プロフィール画像", "spec/fixtures/image/profile_test2.png"
       fill_in "InstagramアカウントURL", with: "https://www.instagra.com/"
       fill_in "メールアドレス", with: user.email
       fill_in "パスワード", with: user.password

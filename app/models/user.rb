@@ -6,7 +6,7 @@ class User < ApplicationRecord
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
   validates :reset_password_token, uniqueness: true, allow_nil: true
-  validates :instagram_account_url, uniqueness: true, allow_nil: true, format: { with: /\Ahttps:\/\/(?:www\.)?instagram\.com\/[a-zA-Z0-9._%+-]+(=[^&]*)?(\?.+)?\z/ }
+  validates :instagram_account_url, uniqueness: true, allow_nil: true, format: { with: %r{\Ahttps://(?:www\.)?instagram\.com/[a-zA-Z0-9._%+-]+(=[^&]*)?(\?.+)?\z} }
 
   mount_uploader :avatar, UserAvatarUploader
   has_many :posts, dependent: :destroy
