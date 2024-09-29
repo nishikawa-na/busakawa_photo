@@ -44,7 +44,7 @@ module ApplicationHelper
         site_name: site
       },
       twitter: {
-        card: 'summary_large_image',
+        card: 'summary',
         site:,
         title:,
         description:,
