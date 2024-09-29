@@ -29,9 +29,6 @@ module ApplicationHelper
       title:,
       description:,
       canonical: request.original_url,
-      icon: {
-        href: image_url('profile.png')
-      },
       og: {
         type: 'website',
         title:,

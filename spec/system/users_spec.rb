@@ -15,17 +15,6 @@ RSpec.describe "Users", type: :system do
       click_button "送信"
       expect(page).to have_content 'アカウント作成しました'
     end
-    it "新規登録時にInstagramURLがバリデーションエラーとなるか" do
-      visit root_path
-      click_link "新規登録"
-      fill_in "ペット名", with: user.name
-      fill_in "InstagramアカウントURL", with: "https://www.instagram.com/"
-      fill_in "メールアドレス", with: user.email
-      fill_in "パスワード", with: user.password
-      fill_in "パスワード確認", with: user.password_confirmation
-      click_button "送信"
-      expect(page).to have_content "InstagramアカウントURLは不正な値です"
-    end
     it "新規登録時にInstagramURLがバリデーションエラーとなるかhttp" do
       visit root_path
       click_link "新規登録"
@@ -47,6 +36,17 @@ RSpec.describe "Users", type: :system do
       fill_in "パスワード確認", with: user.password_confirmation
       click_button "送信"
       expect(page).to have_content "InstagramアカウントURLは不正な値です"
+    end
+    it "パスワードが英数字の混合でないとエラーとなる" do
+      visit root_path
+      click_link "新規登録"
+      fill_in "ペット名", with: user.name
+      fill_in "InstagramアカウントURL", with: user.instagram_account_url
+      fill_in "メールアドレス", with: user.email
+      fill_in "パスワード", with: "12345"
+      fill_in "パスワード確認", with: "12345"
+      click_button "送信"
+      expect(page).to have_content "パスワードは英数字の混合である必要があります"
     end
   end
   describe "destroyアクション" do
