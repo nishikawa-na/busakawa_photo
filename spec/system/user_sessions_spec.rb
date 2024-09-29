@@ -14,7 +14,7 @@ RSpec.describe "UserSessions", type: :system do
     it 'パスワードが異なる為、ログインできません' do
       visit login_path
       fill_in "email", with: user.email
-      fill_in "password", with: "11111"
+      fill_in "password", with: "1a2b3c4"
       click_button "ログイン"
       expect(page).to have_content('ログインに失敗しました')
       expect(current_path).to eq login_path
@@ -22,7 +22,7 @@ RSpec.describe "UserSessions", type: :system do
     it 'ログイン出来るか' do
       visit login_path
       fill_in "email", with: user.email
-      fill_in "password", with: "12345"
+      fill_in "password", with: "1a2b3c45"
       click_button "ログイン"
       expect(page).to have_content 'ログインしました'
     end
