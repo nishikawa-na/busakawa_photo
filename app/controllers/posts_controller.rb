@@ -9,10 +9,8 @@ class PostsController < ApplicationController
   def show
     @post = Post.includes(:user, :comments, :like_posts).find(params[:id])
     @comment = Comment.new
-    if logged_in?
-      unless PostCount.where(created_at: Time.zone.now.all_day).find_by(user_id: current_user.id, post_id: @post.id)
-        current_user.post_counts.create(post_id: @post.id)
-      end
+    if logged_in? && !PostCount.where(created_at: Time.zone.now.all_day).find_by(user_id: current_user.id, post_id: @post.id)
+      current_user.post_counts.create(post_id: @post.id)
     end
   end
 

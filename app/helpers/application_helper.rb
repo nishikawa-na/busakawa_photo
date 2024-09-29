@@ -26,30 +26,30 @@ module ApplicationHelper
     configs = {
       separator: '|',
       reverse: true,
-      site: site,
-      title: title,
-      description: description,
-      keywords: keywords,
+      site:,
+      title:,
+      description:,
+      keywords:,
       canonical: request.original_url,
       icon: {
         href: image_url('profile.png')
       },
       og: {
         type: 'website',
-        title: title,
-        description: description,
+        title:,
+        description:,
         url: request.original_url,
-        image: image,
-        keywords: keywords,
+        image:,
+        keywords:,
         site_name: site
       },
       twitter: {
         card: 'summary_large_image',
-        site: site,
-        title: title,
-        description: description,
-        keywords: keywords,
-        image: image
+        site:,
+        title:,
+        description:,
+        keywords:,
+        image:
       }
     }
     set_meta_tags(configs)
