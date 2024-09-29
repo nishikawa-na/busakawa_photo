@@ -33,7 +33,10 @@
       <div class= "post_body">
         <p><%= @post.body %></p>
       </div>
-      <div class="d-flex justify-content-end gap-1">
+      <div class="d-flex justify-content-end gap-3">
+        <%= link_to "https://x.com/share?url=#{ request.url }&text=【ぶさかわフォト】%0aぶさかわフォトへ投稿しました!%0a%0a", target: :_blank, rel: "noopener noreferrer" do %>
+          <%= image_tag "logo-black.png", size: "20x20" %>
+        <% end %>
         <%= "閲覧数 #{@post.post_counts.count}" %>
         <%= "いいね数 #{@post.like_posts.count}" %>
         <% if logged_in? && @post.user.id == current_user.id %>
