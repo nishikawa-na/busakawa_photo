@@ -1,11 +1,14 @@
 <div class="container">
-  <% @users.each do |user| %>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <%= image_tag user.avatar.url, size: '50x50' %>
-        <%= user.name %>
-        <%= render 'relationships/relationship_button', user: user %>
-      </li>
-    </ul>
-  <% end %>
+  <div class="row w-100">
+    <h1 class="text-center">フォロー一覧</h1>
+      <% @users.each do |user| %>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <%= image_tag user.avatar.url, size: '50x50' %>
+            <%= user.name %>
+            <%= render 'relationships/relationship_button', user: user %>
+          </li>
+        </ul>
+      <% end %>
+  </div>
 </div>

@@ -1,7 +1,7 @@
 <div id="comment-<%= comment.id %>">
   <% if comment.present? && comment.user_id == current_user.id %>
-    <%= comment.user.name %>
     <%= image_tag comment.user.avatar.url, size: '50x50' %>
+    <%= comment.user.name %>
     <%= comment.body %>
     <%= l comment.created_at %>
     <%= link_to comment_path(comment), data: { turbo_method: "delete", turbo_confirm: "削除してよろしいですか？" }, class: "comment-delete" do %>

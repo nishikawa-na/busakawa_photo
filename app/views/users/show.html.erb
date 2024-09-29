@@ -3,6 +3,11 @@
     <%= image_tag @user.avatar.url, size: '200x200' %>
     <ul class="list-group list-group-flush">
       <li class="list-group-item"><%= @user.name %></li>
+      <% if @user.instagram_account_url.present? %>
+        <li class="list-group-item">
+          <%= image_tag "Instagram_Glyph_Gradient.png", size: '40x40' %>
+        </li>
+      <% end %>
       <li class="list-group-item"><%= link_to t('.account_information_change'), edit_user_path %></li>
     </ul>
   </div>
