@@ -1,17 +1,13 @@
 <div class="container">
-  <div class="row w-100">
-    <div class="col-md-6">
+    <div class= "top_page">
       <h1>ぶさかわフォト</h1>
       <h3>あなたの好きなブサかわが見つかる</h3>
-        <div class="d-flex justify-content-around fs-3" >
-          <%= link_to t('.sign up'), new_user_path %>
-          <%= link_to t('.login'), login_path %>
-          <%= link_to t('.guest'), posts_path %>
-          <%= link_to 'Login with LINE', auth_at_provider_path(:provider => :line) %>
-        </div>
     </div>
-    <div class="col-md-6" %>
-      <%= image_tag "top_photo.jpg", class: 'img-fluid' %>
+    <div class="d-flex justify-content-around fs-3" >
+      <%= link_to t('.sign up'), new_user_path, class: "btn btn-outline-info" %>
+      <%= link_to t('.login'), login_path, class: "btn btn-outline-info" %>
+      <%= link_to t('.guest'), posts_path, class: "btn btn-outline-info" %>
+      <%= link_to 'LINEログイン', auth_at_provider_path(:provider => :line), class: "btn btn-outline-success" %>
     </div>
   </div>
 </div>

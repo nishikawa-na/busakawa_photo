@@ -1,11 +1,13 @@
 <div class="container">
   <div class="row w-100">
-    <h1>メールアドレス変更</h1>
-    <p>現在のメールアドレスを入力してください</p>
-    <%= form_with url: password_resets_path, data: { "turbo-method": :post } do |form| %>
-      <%= form.label t('.email'), class: "form-label" %>
-      <%= form.text_field :email, class: "form-control" %>
-      <%= form.submit t('.push'), class: "btn btn-primary" %>
-    <% end %>
+    <div class="posword_resets">
+      <h1 class="text-center">パスワード変更</h1>
+      <p>現在のメールアドレスを入力してください</p>
+      <%= form_with url: password_resets_path, data: { "turbo-method": :post } do |form| %>
+        <%= form.label t('.email'), class: "form-label" %>
+        <%= form.text_field :email, class: "form-control" %>
+        <%= form.submit t('.push'), class: "btn btn-primary" %>
+      <% end %>
+    </div>
   </div>
 </div>

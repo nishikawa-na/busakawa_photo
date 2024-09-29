@@ -2,14 +2,14 @@
   <div class="carousel-inner">
     <% ranking_posts.each_with_index do |post, index| %>
       <div class="carousel-item <%= 'active' if index == 0 %>">
-        <%= link_to post_path(post) do %>
-          <%= image_tag post.images[0].url, size: '300x300' %>
+        <%= link_to post_path(post), class: "post_show" do %>
+          <%= image_tag post.images[0].url, size: '250x250' %>
           <h2><%= post.title %></h2>
-          <%= index+1 %>位
+          <h5><%= index+1 %>位</h5>
         <% end %>
         <div class="user">
-          <%= post.user.name %>
           <%= image_tag post.user.avatar.url, class: "rounded-circle", size: '50x50' %>
+          <%= post.user.name %>
         </div>
       </div>
     <% end %>
