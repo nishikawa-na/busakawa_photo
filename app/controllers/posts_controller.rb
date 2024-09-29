@@ -26,7 +26,7 @@ class PostsController < ApplicationController
         message = [
             {type: "text", text: "ぶさかわフォトです"},
             {type: "text", text: "#{current_user.name}さんが新たに投稿しました。確認してみましょう!"},
-            {type: "text", text: "URL貼る"}
+            {type: "text", text: "https://busakawa.com/"}
           ]
           client.push_message(follower.line_user_id, message)
       end
