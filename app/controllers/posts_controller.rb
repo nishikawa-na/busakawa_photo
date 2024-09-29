@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   require 'line/bot'
-  skip_before_action :require_login, only: %i[index]
+  skip_before_action :require_login, only: %i[index show]
 
   def index
     @ranking_posts = Post.left_joins(:like_posts).includes(:user).group('posts.id').order('COUNT(like_posts.id) DESC').limit(4)
@@ -9,8 +9,10 @@ class PostsController < ApplicationController
   def show
     @post = Post.includes(:user, :comments, :like_posts).find(params[:id])
     @comment = Comment.new
-    unless PostCount.where(created_at: Time.zone.now.all_day).find_by(user_id: current_user.id, post_id: @post.id)
-      current_user.post_counts.create(post_id: @post.id)
+    if logged_in?
+      unless PostCount.where(created_at: Time.zone.now.all_day).find_by(user_id: current_user.id, post_id: @post.id)
+        current_user.post_counts.create(post_id: @post.id)
+      end
     end
   end
 

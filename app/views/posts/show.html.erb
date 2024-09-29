@@ -1,3 +1,5 @@
+<% assign_meta_tags image: "#{request.base_url}#{@post.images[0].url}" %>
+<% binding.pry %>
 <div class="container">
   <div class="row">
     <h1>投稿詳細</h1>
@@ -26,41 +28,43 @@
       </button>
     </div>
     <div class="row">
-    <div class="title">
-      <h2><%= @post.title %></h2>
-    </div>
-    <div class= "post_body">
-      <p><%= @post.body %></p>
-    </div>
-    <div class="d-flex justify-content-end gap-1">
-      <%= "閲覧数 #{@post.post_counts.count}" %>
-      <%= "いいね数 #{@post.like_posts.count}" %>
-      <% if @post.user.id == current_user.id %>
-        <%= link_to edit_post_path(@post.id) do %>
-          <i class="bi bi-pencil"></i>
+      <div class="title">
+        <h2><%= @post.title %></h2>
+      </div>
+      <div class= "post_body">
+        <p><%= @post.body %></p>
+      </div>
+      <div class="d-flex justify-content-end gap-1">
+        <%= "閲覧数 #{@post.post_counts.count}" %>
+        <%= "いいね数 #{@post.like_posts.count}" %>
+        <% if logged_in? && @post.user.id == current_user.id %>
+          <%= link_to edit_post_path(@post.id) do %>
+            <i class="bi bi-pencil"></i>
+          <% end %>
+          <%= link_to post_path(@post), data: { turbo_method: "delete", turbo_confirm: "削除してよろしいですか？" }, class: "post-delete" do %>
+            <i class="bi bi-trash"></i>
+          <% end %>
         <% end %>
-        <%= link_to post_path(@post), data: { turbo_method: "delete", turbo_confirm: "削除してよろしいですか？" }, class: "post-delete" do %>
-          <i class="bi bi-trash"></i>
+      </div>
+      <div class="user">
+        <%= image_tag @post.user.avatar.url, class: "rounded-circle", size: '50x50' %>
+        <%= @post.user.name %>
+        <% if @post.user.instagram_account_url.present? %>
+          <%= link_to @post.user.instagram_account_url, target: :_blank, rel: "noopener noreferrer" do %>
+            <%= image_tag "Instagram_Glyph_Gradient.png", size: '40x40', class: "m-4" %>
+          <% end %>
         <% end %>
-      <% end %>
-    </div>
-    <div class="user">
-      <%= image_tag @post.user.avatar.url, class: "rounded-circle", size: '50x50' %>
-      <%= @post.user.name %>
-      <% if @post.user.instagram_account_url.present? %>
-        <%= link_to @post.user.instagram_account_url, target: :_blank, rel: "noopener noreferrer" do %>
-          <%= image_tag "Instagram_Glyph_Gradient.png", size: '40x40', class: "m-4" %>
-        <% end %>
-      <% end %>
-    </div>
-    <%= render 'relationships/relationship_button', user: @post.user %>
-    <div class="comment">
-        <%= render 'comments/comment_form', post: @post, comment: @comment %>
-      <h5>コメント一覧</h5>
-        <div id= "table-comment">
-          <%= render @post.comments %>
+      </div>
+      <% if logged_in? %>
+        <%= render 'relationships/relationship_button', user: @post.user %>
+        <div class="comment">
+          <%= render 'comments/comment_form', post: @post, comment: @comment %>
+          <h5>コメント一覧</h5>
+            <div id= "table-comment">
+              <%= render @post.comments %>
+            </div>
         </div>
-    </div>
+      <% end %>
     </div>
   </div>
 </div>
