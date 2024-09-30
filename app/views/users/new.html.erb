@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row w-100">
     <div class= "new_account">
-      <h1 class= "text-center">アカウント作成</h1>
+      <h1 class= "text-center p-3 m-3">アカウント作成</h1>
         <%= form_with model: @user do |form| %>
           <%= render 'shared/error_messages', object: form.object %>
           <%= form.label :name, class: "form-label" %>
