@@ -1,45 +1,47 @@
 <div class="container">
   <div class="row w-100">
-    <h1>投稿編集</h1>
-    <%= form_with model: @post do |form| %>
-      <%= render 'shared/error_messages', object: form.object %>
-      <%= form.label :title, class: "form-label" %>
-      <%= form.text_field :title, class: "form-control" %>
-    
-      <%= form.label :body, class: "form-label" %>
-      <%= form.text_area :body, class: "form-control" %>
-    
-      <%= form.label :images, class: "form-label" %>
-      <%= form.file_field :images, multiple: true, class: "form-control" %>
-      <%= form.hidden_field :images_cache %>
-    
-      <div>
-        <div id="carouselExampleIndicators" class="carousel slide">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-            </div>
-            <div class="carousel-inner">
-              <% @post.images.each_with_index do |image, index| %>
-                <div class="carousel-item <%= 'active' if index == 0 %>">
-                  <%= image_tag image.url, size: '250x250' %>
+    <div class="posts_edit">
+      <h1 class="text-center p-3 m-3">投稿編集</h1>
+        <%= form_with model: @post do |form| %>
+          <%= render 'shared/error_messages', object: form.object %>
+          <%= form.label :title, class: "form-label" %>
+          <%= form.text_field :title, class: "form-control" %>
+        
+          <%= form.label :body, class: "form-label" %>
+          <%= form.text_area :body, class: "form-control" %>
+        
+          <%= form.label :images, class: "form-label" %>
+          <%= form.file_field :images, multiple: true, class: "form-control" %>
+          <%= form.hidden_field :images_cache %>
+        
+          <div>
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
                 </div>
-              <% end %>
+                <div class="carousel-inner">
+                  <% @post.images.each_with_index do |image, index| %>
+                    <div class="carousel-item <%= 'active' if index == 0 %>">
+                      <%= image_tag image.url, size: '250x250' %>
+                    </div>
+                  <% end %>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-      </div>
-      <%= form.submit t('.push'), class: "btn btn-primary" %>
-    <% end %>
+          </div>
+          <%= form.submit t('.push'), class: "btn btn-primary" %>
+        <% end %>
+    </div>
   </div>
 </div>

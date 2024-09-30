@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row w-100">
     <div class="posword_resets">
-      <h1 class="text-center">パスワード変更</h1>
+      <h1 class="text-center p-3 m-3">パスワード変更</h1>
       <p>現在のメールアドレスを入力してください</p>
       <%= form_with url: password_resets_path, data: { "turbo-method": :post } do |form| %>
         <%= form.label t('.email'), class: "form-label" %>
