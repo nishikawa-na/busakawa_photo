@@ -34,7 +34,7 @@ class LineBotsController < ApplicationController
         LineBotToken.create(line_user_id: user_id, line_user_id_token: token)
         message = [
           {type: "text", text: "下記URLよりLINE認証を行ってください"},
-          {type: "text", text: "https://busakawa.com/line_bots/new?state=#{token}"}
+          {type: "text", text: "https://busakawa.com/line_bots/new?state=#{token}&openExternalBrowser=1"}
         ]
         client.push_message(user_id,message)
       end
