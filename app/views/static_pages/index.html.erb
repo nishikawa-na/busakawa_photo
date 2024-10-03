@@ -5,10 +5,12 @@
       <h3>ペットのぶさかわを投稿しましょう!</h3>
     </div>
     <div class="d-flex justify-content-around fs-3" >
+      <%= link_to auth_at_provider_path(:provider => :line) do %>
+        <%= image_tag "btn_login_hover" %>
+      <% end %>
       <%= link_to t('.sign up'), new_user_path, class: "btn btn-outline-info" %>
       <%= link_to t('.login'), login_path, class: "btn btn-outline-info" %>
       <%= link_to t('.guest'), posts_path, class: "btn btn-outline-info" %>
-      <%= link_to 'LINEログイン', auth_at_provider_path(:provider => :line), class: "btn btn-outline-success" %>
     </div>
   </div>
 </div>
