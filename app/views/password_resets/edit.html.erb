@@ -1,25 +1,23 @@
 <div class="container">
-  <div class="row w-100">
-    <div class="posword_resets">
-      <h1 class="text-center p-3 m-3">パスワード変更</h1>
-        <%= form_with model: @user, url: password_reset_path(@token) do |form| %>
-          <%= render 'shared/error_messages', object: form.object %>
-            <div class="field">
-              <%= form.label :email, class: "form-label" %><br />
-              <%= @user.email %>
-            </div>
-            <div class="field">
-              <%= form.label :password, class: "form-label" %><br />
-              <%= form.password_field :password, class: "form-control" %>
-            </div>
-            <div class="field">
-              <%= form.label :password_confirmation, class: "form-label" %><br />
-              <%= form.password_field :password_confirmation, class: "form-control" %>
-            </div>
-            <div class="actions">
-              <%= form.submit t('.push'), class: "btn btn-primary" %>
-            </div>
-        <% end %>
-    </div>
+  <div class="posword_resets">
+    <h1 class="text-center p-3 m-3">パスワード変更</h1>
+    <%= form_with model: @user, url: password_reset_path(@token) do |form| %>
+      <%= render 'shared/error_messages', object: form.object %>
+        <div class="field">
+          <%= form.label :email, class: "form-label" %><br />
+          <%= @user.email %>
+        </div>
+        <div class="field">
+          <%= form.label :password, class: "form-label" %><br />
+          <%= form.password_field :password, class: "form-control" %>
+        </div>
+        <div class="field">
+          <%= form.label :password_confirmation, class: "form-label" %><br />
+          <%= form.password_field :password_confirmation, class: "form-control" %>
+        </div>
+        <div class="actions">
+          <%= form.submit t('.push'), class: "btn btn-primary" %>
+        </div>
+    <% end %>
   </div>
 </div>

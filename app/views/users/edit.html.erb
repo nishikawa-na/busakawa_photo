@@ -1,23 +1,21 @@
 <div class="container">
-  <div class="row w-100">
-    <div class="edit_account">
-      <h1 class="text-center p-3 m-3">アカウント編集</h1>
-      <%= form_with model: @user do |form| %>
-        <%= render 'shared/error_messages', object: form.object %>
-        <%= form.label :name, class: "form-label" %>
-        <%= form.text_field :name, class: "form-control" %>
-      
-        <%= form.label :instagram_account_url, class: "form-label" %>
-        <%= form.text_field :instagram_account_url, class: "form-control" %>
-      
-        <%= form.label :avatar, class: "form-label" %>
-        <%= form.file_field :avatar, class: "form-control" %>
-        <%= form.hidden_field :avatar_cache %>
-      
-        <%= image_tag @user.avatar.url, size: '100x100', class: "mx-auto d-block" %>
-      
-        <%= form.submit t('.push'), class: "btn btn-primary" %>
-      <% end %>
-    </div>
+  <div class="edit_account">
+    <h1 class="text-center p-3 m-3">アカウント編集</h1>
+    <%= form_with model: @user do |form| %>
+      <%= render 'shared/error_messages', object: form.object %>
+      <%= form.label :name, class: "form-label" %>
+      <%= form.text_field :name, class: "form-control" %>
+    
+      <%= form.label :instagram_account_url, class: "form-label" %>
+      <%= form.text_field :instagram_account_url, class: "form-control" %>
+    
+      <%= form.label :avatar, class: "form-label" %>
+      <%= form.file_field :avatar, class: "form-control" %>
+      <%= form.hidden_field :avatar_cache %>
+    
+      <%= image_tag @user.avatar.url, size: '100x100', class: "mx-auto d-block" %>
+    
+      <%= form.submit t('.push'), class: "btn btn-primary" %>
+    <% end %>
   </div>
 </div>
