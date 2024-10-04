@@ -1,72 +1,70 @@
 <% assign_meta_tags image: @post.images[0].url %>
 <div class="container">
-  <div class="row w-100">
-    <h1 class="text-center p-3 m-3 posts_title">投稿詳細</h1>
-    <div id="carouselExampleIndicators" class="carousel slide">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-      </div>
-      <div class="carousel-inner">
-        <% @post.images.each_with_index do |image, index| %>
-          <div class="carousel-item <%= 'active' if index == 0 %>">
-            <%= image_tag image.url, size: '250x250' %>
-          </div>
-        <% end %>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+  <h1 class="text-center p-3 m-3 posts_title">投稿詳細</h1>
+  <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
     </div>
-    <div class="row">
-      <div class="posts_title">
-        <h2><%= @post.title %></h2>
-      </div>
-      <div class= "post_body">
-        <p><%= @post.body %></p>
-      </div>
-      <div class="d-flex justify-content-end gap-3">
-        <%= link_to "https://x.com/share?url=#{ request.url }&text=【ぶさかわフォト】%0aぶさかわフォトへ投稿しました!%0a%0a", target: :_blank, rel: "noopener noreferrer" do %>
-          <%= image_tag "logo-black.png", size: "20x20" %>
-        <% end %>
-        <%= "閲覧数 #{@post.post_counts.count}" %>
-        <%= "いいね数 #{@post.like_posts.count}" %>
-        <% if logged_in? && @post.user.id == current_user.id %>
-          <%= link_to edit_post_path(@post.id) do %>
-            <i class="bi bi-pencil"></i>
-          <% end %>
-          <%= link_to post_path(@post), data: { turbo_method: "delete", turbo_confirm: "削除してよろしいですか？" }, class: "post-delete" do %>
-            <i class="bi bi-trash"></i>
-          <% end %>
-        <% end %>
-      </div>
-      <div class="user">
-        <%= image_tag @post.user.avatar.url, class: "rounded-circle", size: '50x50' %>
-        <%= @post.user.name %>
-        <% if @post.user.instagram_account_url.present? %>
-          <%= link_to @post.user.instagram_account_url, target: :_blank, rel: "noopener noreferrer" do %>
-            <%= image_tag "Instagram_Glyph_Gradient.png", size: '40x40', class: "m-4" %>
-          <% end %>
-        <% end %>
-      </div>
-      <% if logged_in? %>
-        <%= render 'relationships/relationship_button', user: @post.user %>
-        <div class="comment">
-          <%= render 'comments/comment_form', post: @post, comment: @comment %>
-          <h5>コメント一覧</h5>
-            <div id= "table-comment">
-              <%= render @post.comments %>
-            </div>
+    <div class="carousel-inner">
+      <% @post.images.each_with_index do |image, index| %>
+        <div class="carousel-item <%= 'active' if index == 0 %>">
+          <%= image_tag image.url, size: '250x250' %>
         </div>
       <% end %>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div class="row">
+    <div class="posts_title">
+      <h2><%= @post.title %></h2>
+    </div>
+    <div class= "post_body">
+      <p><%= @post.body %></p>
+    </div>
+    <div class="d-flex justify-content-end gap-3">
+      <%= link_to "https://x.com/share?url=#{ request.url }&text=【ぶさかわフォト】%0aぶさかわフォトへ投稿しました!%0a%0a", target: :_blank, rel: "noopener noreferrer" do %>
+        <%= image_tag "logo-black.png", size: "20x20" %>
+      <% end %>
+      <%= "閲覧数 #{@post.post_counts.count}" %>
+      <%= "いいね数 #{@post.like_posts.count}" %>
+      <% if logged_in? && @post.user.id == current_user.id %>
+        <%= link_to edit_post_path(@post.id) do %>
+          <i class="bi bi-pencil"></i>
+        <% end %>
+        <%= link_to post_path(@post), data: { turbo_method: "delete", turbo_confirm: "削除してよろしいですか？" }, class: "post-delete" do %>
+          <i class="bi bi-trash"></i>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="user">
+      <%= image_tag @post.user.avatar.url, class: "rounded-circle", size: '50x50' %>
+      <%= @post.user.name %>
+      <% if @post.user.instagram_account_url.present? %>
+        <%= link_to @post.user.instagram_account_url, target: :_blank, rel: "noopener noreferrer" do %>
+          <%= image_tag "Instagram_Glyph_Gradient.png", size: '40x40', class: "m-4" %>
+        <% end %>
+      <% end %>
+    </div>
+    <% if logged_in? %>
+      <%= render 'relationships/relationship_button', user: @post.user %>
+      <div class="comment">
+        <%= render 'comments/comment_form', post: @post, comment: @comment %>
+        <h5>コメント一覧</h5>
+          <div id= "table-comment">
+            <%= render @post.comments %>
+          </div>
+      </div>
+    <% end %>
   </div>
 </div>
