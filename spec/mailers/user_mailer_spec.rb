@@ -8,7 +8,7 @@ RSpec.describe UserMailer, type: :mailer do
   it "メール送信ができているか" do
     expect(mail.subject).to eq("ぶさかわフォトよりパスワードリセットのお知らせ")
     expect(mail.to).to eq([user.email.to_s])
-    expect(mail.from).to eq(["busakawa_photo@example.com"])
+    expect(mail.from).to eq(["busakawaphoto@example.com"])
   end
   it "メール内のURLを確認する" do
     expect(decoded_text).to include(edit_password_reset_url(user.reset_password_token))
