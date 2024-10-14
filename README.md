@@ -37,7 +37,7 @@ https://busakawa.com/
 
 | LINEログイン | LINEログイン |
 | ---- | ---- |
-| <img src = "https://i.gyazo.com/a26158ae024b9c3000685eae91f142a4.png" | <img src = "https://i.gyazo.com/cbaf019065448d749f82f0e989a5af71.png" |
+| [![Image from Gyazo](https://i.gyazo.com/a26158ae024b9c3000685eae91f142a4.png)](https://gyazo.com/a26158ae024b9c3000685eae91f142a4) | [![Image from Gyazo](https://i.gyazo.com/cbaf019065448d749f82f0e989a5af71.png)](https://gyazo.com/cbaf019065448d749f82f0e989a5af71) |
 
 | アカウント作成 | ログイン |
 | ---- | ---- |
@@ -54,10 +54,10 @@ https://busakawa.com/
 | [![Image from Gyazo](https://i.gyazo.com/b477c69656f22dbfd1b97c91342a1f08.gif)](https://gyazo.com/b477c69656f22dbfd1b97c91342a1f08) | [![Image from Gyazo](https://i.gyazo.com/ff624c0960d20c1c9dbd8c8f8164f3ca.gif)](https://gyazo.com/ff624c0960d20c1c9dbd8c8f8164f3ca) |
 | パスワード変更 | パスワード変更 |
 | [![Image from Gyazo](https://i.gyazo.com/97f1f57f576a420ae25ea08a82cc6859.gif)](https://gyazo.com/97f1f57f576a420ae25ea08a82cc6859) | [![Image from Gyazo](https://i.gyazo.com/77f9a331cb5aa2e11b929b2254a19445.png)](https://gyazo.com/77f9a331cb5aa2e11b929b2254a19445) |
-| LINE通知 |  |
-| [![Image from Gyazo](https://i.gyazo.com/4d19b153c913a42f0e246d9388a8b49d.png)](https://gyazo.com/4d19b153c913a42f0e246d9388a8b49d) | |
-| オートコンプリート検索 | 動的OGP |
-| [![Image from Gyazo](https://i.gyazo.com/06efd0d906eee5309f42f8f67e9443b2.gif)](https://gyazo.com/06efd0d906eee5309f42f8f67e9443b2) | [![Image from Gyazo](https://i.gyazo.com/231b6c23653cfea791ea104bbc6256e1.png)](https://gyazo.com/231b6c23653cfea791ea104bbc6256e1) |
+| LINE通知 | オートコンプリート検索 |
+| [![Image from Gyazo](https://i.gyazo.com/4d19b153c913a42f0e246d9388a8b49d.png)](https://gyazo.com/4d19b153c913a42f0e246d9388a8b49d) | [![Image from Gyazo](https://i.gyazo.com/06efd0d906eee5309f42f8f67e9443b2.gif)](https://gyazo.com/06efd0d906eee5309f42f8f67e9443b2) |
+| 動的OGP |
+| [![Image from Gyazo](https://i.gyazo.com/231b6c23653cfea791ea104bbc6256e1.png)](https://gyazo.com/231b6c23653cfea791ea104bbc6256e1) |
 
 # 技術構成
 ## 使用技術
