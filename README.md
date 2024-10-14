@@ -57,9 +57,7 @@ https://busakawa.com/
 | LINE通知 | オートコンプリート検索 |
 | [![Image from Gyazo](https://i.gyazo.com/4d19b153c913a42f0e246d9388a8b49d.png)](https://gyazo.com/4d19b153c913a42f0e246d9388a8b49d) | [![Image from Gyazo](https://i.gyazo.com/06efd0d906eee5309f42f8f67e9443b2.gif)](https://gyazo.com/06efd0d906eee5309f42f8f67e9443b2) |
 | 動的OGP |
-| <a href="https://gyazo.com/231b6c23653cfea791ea104bbc6256e1">
-<img src="https://i.gyazo.com/231b6c23653cfea791ea104bbc6256e1.png" width="50%">
-</a> |
+| <a href="https://gyazo.com/231b6c23653cfea791ea104bbc6256e1"><img src="https://i.gyazo.com/231b6c23653cfea791ea104bbc6256e1.png" width="50%"></a> |
 
 # 技術構成
 ## 使用技術
