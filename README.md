@@ -19,7 +19,6 @@
 # サービスURL
 https://busakawa.com/
 
-
 # サービス開発の経緯
 ｢愛犬の可愛さ(ぶさかわ)を他人に共有したい｣という思いから開発しました。<br>
 一般的に可愛い犬と言われてイメージされるのは、<br>
@@ -38,9 +37,10 @@ https://busakawa.com/
 
 | LINEログイン | LINEログイン |
 | ---- | ---- |
-| <img src="https://gyazo.com/a26158ae024b9c3000685eae91f142a4"> | <img src="https://gyazo.com/cbaf019065448d749f82f0e989a5af71"> |
+| [![Image from Gyazo](https://i.gyazo.com/a26158ae024b9c3000685eae91f142a4.png)](https://gyazo.com/a26158ae024b9c3000685eae91f142a4) | [![Image from Gyazo](https://i.gyazo.com/cbaf019065448d749f82f0e989a5af71.png)](https://gyazo.com/cbaf019065448d749f82f0e989a5af71) |
 
 | アカウント作成 | ログイン |
+| ---- | ---- |
 | [![Image from Gyazo](https://i.gyazo.com/420da754c919cebec6c5cd27ab249092.png)](https://gyazo.com/420da754c919cebec6c5cd27ab249092) | [![Image from Gyazo](https://i.gyazo.com/32b2832eaddae5a0fcea04afc4a56cf7.png)](https://gyazo.com/32b2832eaddae5a0fcea04afc4a56cf7) |
 | 公式LINE追加 | 公式LINE連携 |
 | [![Image from Gyazo](https://i.gyazo.com/4cee8c806db95a137a83ade401de7d5a.png)](https://gyazo.com/4cee8c806db95a137a83ade401de7d5a) | [![Image from Gyazo](https://i.gyazo.com/4cc37240706d6012e1a33a94ef7ebc21.png)](https://gyazo.com/4cc37240706d6012e1a33a94ef7ebc21) |
