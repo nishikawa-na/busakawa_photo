@@ -38,9 +38,7 @@ https://busakawa.com/
 | LINEログイン | LINEログイン |
 | ---- | ---- |
 | <a href="https://gyazo.com/a26158ae024b9c3000685eae91f142a4"><img src="https://i.gyazo.com/a26158ae024b9c3000685eae91f142a4.png" width="50%"></a> | <a href="https://gyazo.com/cbaf019065448d749f82f0e989a5af71"><img src="https://i.gyazo.com/cbaf019065448d749f82f0e989a5af71.png" width="50%"></a> |
-
 | アカウント作成 | ログイン |
-| ---- | ---- |
 | <a href="https://gyazo.com/420da754c919cebec6c5cd27ab249092"><img src="https://i.gyazo.com/420da754c919cebec6c5cd27ab249092.png" width="50%"></a> | <a href="https://gyazo.com/32b2832eaddae5a0fcea04afc4a56cf7"><img src="https://i.gyazo.com/32b2832eaddae5a0fcea04afc4a56cf7.png" width="50%"></a> |
 | 公式LINE追加 | 公式LINE連携 |
 | <a href="https://gyazo.com/4cee8c806db95a137a83ade401de7d5a"><img src="https://i.gyazo.com/4cee8c806db95a137a83ade401de7d5a.png" width="50%"></a>| <a href="https://gyazo.com/4cc37240706d6012e1a33a94ef7ebc21"><img src="https://i.gyazo.com/4cc37240706d6012e1a33a94ef7ebc21.png" width="50%"></a> |
