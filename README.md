@@ -37,34 +37,34 @@ https://busakawa.com/
 
 | LINEログイン | LINEログイン |
 |:--:|:--:|
-| <a href="https://gyazo.com/a26158ae024b9c3000685eae91f142a4"><img src="https://i.gyazo.com/a26158ae024b9c3000685eae91f142a4.png"></a> | <a href="https://gyazo.com/cbaf019065448d749f82f0e989a5af71"><img src="https://i.gyazo.com/cbaf019065448d749f82f0e989a5af71.png"></a> |
+| <a href="https://gyazo.com/a26158ae024b9c3000685eae91f142a4"><img src="https://i.gyazo.com/a26158ae024b9c3000685eae91f142a4.png" width="372"></a> | <a href="https://gyazo.com/cbaf019065448d749f82f0e989a5af71"><img src="https://i.gyazo.com/cbaf019065448d749f82f0e989a5af71.png" width="372"></a> |
 | アカウント作成 | ログイン |
 |:--:|:--:|
-| <a href="https://gyazo.com/420da754c919cebec6c5cd27ab249092"><img src="https://i.gyazo.com/420da754c919cebec6c5cd27ab249092.png"></a> | <a href="https://gyazo.com/32b2832eaddae5a0fcea04afc4a56cf7"><img src="https://i.gyazo.com/32b2832eaddae5a0fcea04afc4a56cf7.png"></a> |
+| <a href="https://gyazo.com/420da754c919cebec6c5cd27ab249092"><img src="https://i.gyazo.com/420da754c919cebec6c5cd27ab249092.png" width="372"></a> | <a href="https://gyazo.com/32b2832eaddae5a0fcea04afc4a56cf7"><img src="https://i.gyazo.com/32b2832eaddae5a0fcea04afc4a56cf7.png" width="372"></a> |
 | 公式LINE追加 | 公式LINE連携 |
 |:--:|:--:|
-| <a href="https://gyazo.com/4cee8c806db95a137a83ade401de7d5a"><img src="https://i.gyazo.com/4cee8c806db95a137a83ade401de7d5a.png"></a>| <a href="https://gyazo.com/4cc37240706d6012e1a33a94ef7ebc21"><img src="https://i.gyazo.com/4cc37240706d6012e1a33a94ef7ebc21.png"></a> |
+| <a href="https://gyazo.com/4cee8c806db95a137a83ade401de7d5a"><img src="https://i.gyazo.com/4cee8c806db95a137a83ade401de7d5a.png" width="372"></a>| <a href="https://gyazo.com/4cc37240706d6012e1a33a94ef7ebc21"><img src="https://i.gyazo.com/4cc37240706d6012e1a33a94ef7ebc21.png" width="372"></a> |
 | ランキング機能 | 投稿一覧 |
 |:--:|:--:|
-| <a href="https://gyazo.com/af5dc77975099fdb72244fe5825de13b"><img src="https://i.gyazo.com/af5dc77975099fdb72244fe5825de13b.gif"></a> | <a href="https://gyazo.com/1985b8556bccb284117742e3f5a79683"><img src="https://i.gyazo.com/1985b8556bccb284117742e3f5a79683.gif"></a> |
+| <a href="https://gyazo.com/af5dc77975099fdb72244fe5825de13b"><img src="https://i.gyazo.com/af5dc77975099fdb72244fe5825de13b.gif" width="372"></a> | <a href="https://gyazo.com/1985b8556bccb284117742e3f5a79683"><img src="https://i.gyazo.com/1985b8556bccb284117742e3f5a79683.gif" width="372"></a> |
 | 投稿作成 | 投稿編集 |
 |:--:|:--:|
-| <a href="https://gyazo.com/649f88d96e3d91dc34e007ed06ba8827"><img src="https://i.gyazo.com/649f88d96e3d91dc34e007ed06ba8827.gif"></a> | <a href="https://gyazo.com/de6f5b1b29c2a5a3a0a560c862b09947"><img src="https://i.gyazo.com/de6f5b1b29c2a5a3a0a560c862b09947.gif"></a> |
+| <a href="https://gyazo.com/649f88d96e3d91dc34e007ed06ba8827"><img src="https://i.gyazo.com/649f88d96e3d91dc34e007ed06ba8827.gif" width="372"></a> | <a href="https://gyazo.com/de6f5b1b29c2a5a3a0a560c862b09947"><img src="https://i.gyazo.com/de6f5b1b29c2a5a3a0a560c862b09947.gif" width="372"></a> |
 | いいね機能 | 投稿詳細 |
 |:--:|:--:|
-| <a href="https://gyazo.com/284a81e558133ce663cd4a1f2ab5829a"><img src="https://i.gyazo.com/284a81e558133ce663cd4a1f2ab5829a.gif"></a> | <a href="https://gyazo.com/be04fdfd2f6e9a002cdfda31b89ee758"><img src="https://i.gyazo.com/be04fdfd2f6e9a002cdfda31b89ee758.png"></a> |
+| <a href="https://gyazo.com/284a81e558133ce663cd4a1f2ab5829a"><img src="https://i.gyazo.com/284a81e558133ce663cd4a1f2ab5829a.gif" width="372"></a> | <a href="https://gyazo.com/be04fdfd2f6e9a002cdfda31b89ee758"><img src="https://i.gyazo.com/be04fdfd2f6e9a002cdfda31b89ee758.png" width="372"></a> |
 | フォロー機能 | コメント機能 |
 |:--:|:--:|
-| <a href="https://gyazo.com/b477c69656f22dbfd1b97c91342a1f08"><img src="https://i.gyazo.com/b477c69656f22dbfd1b97c91342a1f08.gif"></a> | <a href="https://gyazo.com/ff624c0960d20c1c9dbd8c8f8164f3ca"><img src="https://i.gyazo.com/ff624c0960d20c1c9dbd8c8f8164f3ca.gif"></a> |
+| <a href="https://gyazo.com/b477c69656f22dbfd1b97c91342a1f08"><img src="https://i.gyazo.com/b477c69656f22dbfd1b97c91342a1f08.gif" width="372"></a> | <a href="https://gyazo.com/ff624c0960d20c1c9dbd8c8f8164f3ca"><img src="https://i.gyazo.com/ff624c0960d20c1c9dbd8c8f8164f3ca.gif" width="372"></a> |
 | パスワード変更 | パスワード変更 |
 |:--:|:--:|
-| <a href="https://gyazo.com/97f1f57f576a420ae25ea08a82cc6859"><img src="https://i.gyazo.com/97f1f57f576a420ae25ea08a82cc6859.gif"></a> | <a href="https://gyazo.com/77f9a331cb5aa2e11b929b2254a19445"><img src="https://i.gyazo.com/77f9a331cb5aa2e11b929b2254a19445.png"></a> |
+| <a href="https://gyazo.com/97f1f57f576a420ae25ea08a82cc6859"><img src="https://i.gyazo.com/97f1f57f576a420ae25ea08a82cc6859.gif" width="372"></a> | <a href="https://gyazo.com/77f9a331cb5aa2e11b929b2254a19445"><img src="https://i.gyazo.com/77f9a331cb5aa2e11b929b2254a19445.png" width="372"></a> |
 | LINE通知 | オートコンプリート検索 |
 |:--:|:--:|
-| <a href="https://gyazo.com/4d19b153c913a42f0e246d9388a8b49d"><img src="https://i.gyazo.com/4d19b153c913a42f0e246d9388a8b49d.png"></a> | <a href="https://gyazo.com/06efd0d906eee5309f42f8f67e9443b2"><img src="https://i.gyazo.com/06efd0d906eee5309f42f8f67e9443b2.gif"></a> |
+| <a href="https://gyazo.com/4d19b153c913a42f0e246d9388a8b49d"><img src="https://i.gyazo.com/4d19b153c913a42f0e246d9388a8b49d.png" width="372"></a> | <a href="https://gyazo.com/06efd0d906eee5309f42f8f67e9443b2"><img src="https://i.gyazo.com/06efd0d906eee5309f42f8f67e9443b2.gif" width="372"></a> |
 | 動的OGP |
 |:--:|
-| <a href="https://gyazo.com/231b6c23653cfea791ea104bbc6256e1"><img src="https://i.gyazo.com/231b6c23653cfea791ea104bbc6256e1.png"></a> |
+| <a href="https://gyazo.com/231b6c23653cfea791ea104bbc6256e1"><img src="https://i.gyazo.com/231b6c23653cfea791ea104bbc6256e1.png" width="372"></a> |
 
 # 技術構成
 ## 使用技術
