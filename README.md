@@ -2,13 +2,13 @@
 [![Image from Gyazo](https://i.gyazo.com/f1b08dfc7f6c9886522b0d1eb9a789fa.png)](https://gyazo.com/f1b08dfc7f6c9886522b0d1eb9a789fa)
 
 # 目次
-- [サービス概要](#-サービス概要)
-- [サービスURL](#-サービスURL)
-- [サービス開発の経緯](#-サービス開発の経緯)
-- [機能紹介](#-機能紹介)
-- [技術構成](#-技術構成)
+- [サービス概要](#サービス概要)
+- [サービスURL](#サービスURL)
+- [サービス開発の経緯](#サービス開発の経緯)
+- [機能紹介](#機能紹介)
+- [技術構成](#技術構成)
 
-# <a id="サービス概要"></a>
+# サービス概要
 あなたの好きなぶさかわが見つかる ペットのぶさかわを投稿しましょう!
 
 ｢ぶさかわフォト｣は、ペットのぶさかわなシーンを投稿 共有できるサービスです。
@@ -16,10 +16,10 @@
 ランキング機能により、ぶさかわを共有する楽しさを味わえます。
 動的OGPにより、SNSに投稿することで、友だちに自慢することが出来ます。
 
-# <a id="サービスURL"></a>
+# サービスURL
 https://busakawa.com/
 
-# <a id="サービス開発の経緯"></a>
+# サービス開発の経緯
 ｢愛犬の可愛さ(ぶさかわ)を他人に共有したい｣という思いから開発しました。
 一般的に可愛い犬と言われてイメージされるのは、
 ・毛がモフモフしている
@@ -33,7 +33,7 @@ https://busakawa.com/
 そこで愛犬の可愛いさは、犬を飼っていない人からすると理解されないものだと分かりました。
 なので、この可愛さ(ぶさかわ)を理解できるユーザー間で共有したいと思いました。
 
-# <a id="機能紹介"></a>
+# 機能紹介
 
 | LINEログイン | LINEログイン |
 | [![Image from Gyazo](https://i.gyazo.com/a26158ae024b9c3000685eae91f142a4.png)](https://gyazo.com/a26158ae024b9c3000685eae91f142a4) | [![Image from Gyazo](https://i.gyazo.com/cbaf019065448d749f82f0e989a5af71.png)](https://gyazo.com/cbaf019065448d749f82f0e989a5af71) |
@@ -57,7 +57,7 @@ https://busakawa.com/
 | オートコンプリート検索 | 動的OGP |
 | [![Image from Gyazo](https://i.gyazo.com/06efd0d906eee5309f42f8f67e9443b2.gif)](https://gyazo.com/06efd0d906eee5309f42f8f67e9443b2) | [![Image from Gyazo](https://i.gyazo.com/231b6c23653cfea791ea104bbc6256e1.png)](https://gyazo.com/231b6c23653cfea791ea104bbc6256e1) |
 
-# <a id="技術構成"></a>
+# 技術構成
 ## 使用技術
 | カテゴリ | 技術内容 |
 | ---- | ---- |
