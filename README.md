@@ -1,15 +1,15 @@
 # アプリ名　｢ ぶさかわフォト ｣
-[![Image from Gyazo](https://i.gyazo.com/5f2fad444677ef406e323934e1a41c9d.png)](https://gyazo.com/5f2fad444677ef406e323934e1a41c9d)
+[![Image from Gyazo](https://i.gyazo.com/f1b08dfc7f6c9886522b0d1eb9a789fa.png)](https://gyazo.com/f1b08dfc7f6c9886522b0d1eb9a789fa)
 
 # 目次
-・[サービス概要](#サービス概要)
-・[サービスURL](#サービスURL)
-・[サービス開発の経緯](#サービス開発の経緯)
-・[機能紹介](#機能紹介)
-・[技術構成](#技術構成)
+- [サービス概要](#-サービス概要)
+- [サービスURL](#-サービスURL)
+- [サービス開発の経緯](#-サービス開発の経緯)
+- [機能紹介](#-機能紹介)
+- [技術構成](#-技術構成)
 
 # <a id="サービス概要"></a>
-~あなたの好きなぶさかわが見つかる ペットのぶさかわを投稿しましょう!~
+あなたの好きなぶさかわが見つかる ペットのぶさかわを投稿しましょう!
 
 ｢ぶさかわフォト｣は、ペットのぶさかわなシーンを投稿 共有できるサービスです。
 ｢ぶさかわフォト｣公式LINEを友だち追加し、連携することで、アプリ内のフォロワーが投稿したときに通知を受け取ることが出来ます。
@@ -34,8 +34,10 @@ https://busakawa.com/
 なので、この可愛さ(ぶさかわ)を理解できるユーザー間で共有したいと思いました。
 
 # <a id="機能紹介"></a>
+
 | LINEログイン | LINEログイン |
 | [![Image from Gyazo](https://i.gyazo.com/a26158ae024b9c3000685eae91f142a4.png)](https://gyazo.com/a26158ae024b9c3000685eae91f142a4) | [![Image from Gyazo](https://i.gyazo.com/cbaf019065448d749f82f0e989a5af71.png)](https://gyazo.com/cbaf019065448d749f82f0e989a5af71) |
+
 | アカウント作成 | ログイン |
 | [![Image from Gyazo](https://i.gyazo.com/420da754c919cebec6c5cd27ab249092.png)](https://gyazo.com/420da754c919cebec6c5cd27ab249092) | [![Image from Gyazo](https://i.gyazo.com/32b2832eaddae5a0fcea04afc4a56cf7.png)](https://gyazo.com/32b2832eaddae5a0fcea04afc4a56cf7) |
 | 公式LINE追加 | 公式LINE連携 |
