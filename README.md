@@ -46,7 +46,7 @@ https://busakawa.com/
 | <a href="https://gyazo.com/420da754c919cebec6c5cd27ab249092"><img src="https://i.gyazo.com/420da754c919cebec6c5cd27ab249092.png" width="372"></a> | <a href="https://gyazo.com/32b2832eaddae5a0fcea04afc4a56cf7"><img src="https://i.gyazo.com/32b2832eaddae5a0fcea04afc4a56cf7.png" width="372"></a> |
 
 | 公式LINE追加 | 公式LINE連携 |
-|:--:|:--:|
+| ---- | ---- |
 | <a href="https://gyazo.com/4cee8c806db95a137a83ade401de7d5a"><img src="https://i.gyazo.com/4cee8c806db95a137a83ade401de7d5a.png" width="372"></a>| <a href="https://gyazo.com/4cc37240706d6012e1a33a94ef7ebc21"><img src="https://i.gyazo.com/4cc37240706d6012e1a33a94ef7ebc21.png" width="372"></a> |
 | sorceryにてアカウント作成、ログイン後に公式LINEを友だち登録することができます。<br>公式LINE友だち登録後は、トーク画面のURLより認証する必要があります。<br>ヘッダーからリンクがあるため、好きなタイミングで友だち登録できます。 | 公式LINE追加後のトーク画面URLよりLINE連携を行います。|
 
