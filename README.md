@@ -48,7 +48,7 @@ https://busakawa.com/
 | 公式LINE追加 | 公式LINE連携 |
 |:--:|:--:|
 | <a href="https://gyazo.com/4cee8c806db95a137a83ade401de7d5a"><img src="https://i.gyazo.com/4cee8c806db95a137a83ade401de7d5a.png" width="372"></a>| <a href="https://gyazo.com/4cc37240706d6012e1a33a94ef7ebc21"><img src="https://i.gyazo.com/4cc37240706d6012e1a33a94ef7ebc21.png" width="372"></a> |
-| 公式LINEを友だち登録することができます。<br>公式LINE友だち登録後は、トーク画面のURLより認証する必要があります。 | 公式LINE追加後のトーク画面URLよりLINE連携を行います。|
+| 公式LINEを友だち登録することができます。<br>公式LINE友だち登録後は、トーク内のURLより認証する必要があります。 | 公式LINE友達登録後のトーク内URLよりLINE連携を行います。|
 
 | ランキング機能 | 投稿一覧 |
 |:--:|:--:|
@@ -77,7 +77,7 @@ https://busakawa.com/
 | LINE通知 | オートコンプリート検索 |
 |:--:|:--:|
 | <a href="https://gyazo.com/4d19b153c913a42f0e246d9388a8b49d"><img src="https://i.gyazo.com/4d19b153c913a42f0e246d9388a8b49d.png" width="372"></a> | <a href="https://gyazo.com/06efd0d906eee5309f42f8f67e9443b2"><img src="https://i.gyazo.com/06efd0d906eee5309f42f8f67e9443b2.gif" width="372"></a> |
-| ユーザーをフォローしている<br>公式LINEを友だち登録している<br>この二つの条件をクリアしていると<br>フォローユーザーが投稿したときに<br>LINE通知が来ます。 | タイトルを検索すると自動で検索ワードを提供します。 |
+| ユーザーをフォローしている<br>公式LINEを友だち登録している<br>この二つの条件をクリアしているとフォローユーザーが投稿したときにLINE通知が来ます。 | タイトルを検索すると自動で検索ワードを提供します。 |
 
 | 動的OGP |
 |:--:|
