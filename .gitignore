@@ -43,5 +43,8 @@
 /.env
 /config/certs/*
 
-/lolalhost-key.pem
-/lokalhost.pem
+/localhost-key.pem
+/localhost.pem
+/public/uploads/post/*
+/public/uploads/tmp/*
+/public/uploads/user/*
