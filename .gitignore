@@ -42,3 +42,6 @@
 /vendor/bundle
 /.env
 /config/certs/*
+
+/lolalhost-key.pem
+/lokalhost.pem
