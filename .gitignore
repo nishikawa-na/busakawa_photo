@@ -46,5 +46,4 @@
 /localhost-key.pem
 /localhost.pem
 /public/uploads/post/*
-/public/uploads/tmp/*
 /public/uploads/user/*
