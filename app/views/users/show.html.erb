@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-center">
   <div class="card" style="width: 18rem;">
-    <%= image_tag @user.avatar.url, size: '200x200', class: "mx-auto d-block" %>
+    <%= image_tag @user.avatar.url, size: '200x200', class: "mx-auto d-block p-3 m-4" %>
     <ul class="list-group list-group-flush">
       <li class="list-group-item"><%= @user.name %></li>
       <% if @user.instagram_account_url.present? %>
