@@ -14,10 +14,17 @@ class LineBotsController < ApplicationController
 
   def create
     @line_bot_token = LineBotToken.find_by(line_user_id_token: params[:line_user_id_token])
-    current_user.update(line_user_id: @line_bot_token.line_user_id)
-    @line_bot_token.destroy
-    flash[:notice] = "LINE連携が完了しました"
-    redirect_to posts_path
+    begin
+      ActiveRecord::Base.transaction do
+        current_user.update!(line_user_id: @line_bot_token.line_user_id)
+        @line_bot_token.destroy!
+        flash[:notice] = "LINE連携が完了しました"
+        redirect_to posts_path
+      end
+    rescue ActiveRecord::RecordInvalid
+      flash[:alert] = "連携処理に失敗しました 公式LINEからのURLより再度お試しください"
+      redirect_to line_official_path
+    end
   end
 
   def official
