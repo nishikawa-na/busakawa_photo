@@ -23,25 +23,21 @@ class UsersController < ApplicationController
   end
 
   def update
-    begin
-      @user.update!(params_user)
-      flash[:notice] = "ユーザー情報を更新しました"
-      redirect_to user_path
-    rescue ActiveRecord::RecordInvalid
-      flash.now[:alert] ="ユーザー情報の更新に失敗しました"
-      render :edit, status: :unprocessable_entity
-    end
+    @user.update!(params_user)
+    flash[:notice] = "ユーザー情報を更新しました"
+    redirect_to user_path
+  rescue ActiveRecord::RecordInvalid
+    flash.now[:alert] ="ユーザー情報の更新に失敗しました"
+    render :edit, status: :unprocessable_entity
   end
 
   def destroy
-    begin
-      @user.destroy!
-      flash[:alert] = "アカウントを削除しました"
-      redirect_to root_path
-    rescue ActiveRecord::RecordNotDestroyed
-      flash[:alert] ="アカウント削除に失敗しました もう一度試してください"
-      redirect_to posts_path
-    end
+    @user.destroy!
+    flash[:alert] = "アカウントを削除しました"
+    redirect_to root_path
+  rescue ActiveRecord::RecordNotDestroyed
+    flash[:alert] ="アカウント削除に失敗しました もう一度試してください"
+    redirect_to posts_path
   end
 
   def post
