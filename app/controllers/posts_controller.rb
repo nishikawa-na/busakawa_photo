@@ -20,7 +20,8 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(params_post)
-    if @post.save
+    begin
+      @post.save!
       followers = current_user.followers
       followers.each do |follower|
         message = [
@@ -32,7 +33,7 @@ class PostsController < ApplicationController
       end
       flash[:notice] = "投稿作成しました"
       redirect_to posts_path
-    else
+    rescue ActiveRecord::RecordInvalid
       flash.now[:alert] = "投稿作成に失敗しました"
       render :new, status: :unprocessable_entity
     end
@@ -44,10 +45,11 @@ class PostsController < ApplicationController
 
   def update
     @post = current_user.posts.find(params[:id])
-    if @post.update(params_post)
+    begin
+      @post.update!(params_post)
       flash[:notice] = "投稿編集しました"
       redirect_to post_path(@post)
-    else
+    rescue ActiveRecord::RecordInvalid
       flash.now[:alert] = "投稿編集に失敗しました"
       render :edit, status: :unprocessable_entity
     end
@@ -55,12 +57,13 @@ class PostsController < ApplicationController
 
   def destroy
     @post = current_user.posts.find(params[:id])
-    if @post.destroy
+    begin
+      @post.destroy!
       flash[:alert] = "投稿削除しました"
       redirect_to posts_path
-    else
-      flash.now[:alert] = "投稿削除に失敗しました"
-      render :edit, status: :unprocessable_entity
+    rescue ActiveRecord::RecordNotDestroyed
+      flash[:alert] = "投稿削除に失敗しました もう一度試してください"
+      redirect_to post_path(@post)
     end
   end
 
