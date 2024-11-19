@@ -26,15 +26,24 @@ class PasswordResetsController < ApplicationController
     if @user.blank?
       not_authenticated
       return
+    elsif params[:user][:password].blank?
+      flash.now[:alert] = "パスワードの変更に失敗しました パスワードが空です"
+      render :edit, status: :unprocessable_entity
+      return
     end
+    password_update(@user)
+  end
 
-    @user.password_confirmation = params[:user][:password_confirmation]
-    if @user.change_password(params[:user][:password])
+  private
+
+  def password_update(user)
+    user.password_confirmation = params[:user][:password_confirmation]
+    if user.change_password(params[:user][:password])
       flash[:notice] = "パスワードを変更しました"
       redirect_to login_path
     else
       flash.now[:alert] = "パスワードの変更に失敗しました"
-      render :action => "edit", status: :unprocessable_entity
+      render :edit, status: :unprocessable_entity
     end
   end
 end

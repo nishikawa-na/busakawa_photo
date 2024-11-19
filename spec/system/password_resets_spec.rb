@@ -11,8 +11,8 @@ RSpec.describe "PasswordResets", type: :system do
       click_button "送信"
       expect(page).to have_content "メールを送信しました"
       visit edit_password_reset_path(user.reload.reset_password_token)
-      fill_in 'パスワード', with: '123456789'
-      fill_in 'パスワード確認', with: '123456789'
+      fill_in 'パスワード', with: '1234b'
+      fill_in 'パスワード確認', with: '1234b'
       click_button '送信'
       expect(page).to have_content "パスワードを変更しました"
     end
