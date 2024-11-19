@@ -31,9 +31,14 @@ class PasswordResetsController < ApplicationController
       render :edit, status: :unprocessable_entity
       return
     end
+    password_update(@user)
+  end
 
-    @user.password_confirmation = params[:user][:password_confirmation]
-    if @user.change_password(params[:user][:password])
+  private
+
+  def password_update(user)
+    user.password_confirmation = params[:user][:password_confirmation]
+    if user.change_password(params[:user][:password])
       flash[:notice] = "パスワードを変更しました"
       redirect_to login_path
     else
