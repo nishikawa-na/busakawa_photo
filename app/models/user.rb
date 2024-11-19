@@ -2,10 +2,9 @@ class User < ApplicationRecord
   authenticates_with_sorcery!
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true
-  validates :password, presence: true, length: { minimum: 5, maximum: 40 }, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: 'は英数字の混合である必要があります' }, on: :create, if: lambda {
+  validates :password, presence: true, confirmation: true, length: { minimum: 5, maximum: 40 }, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: 'は英数字の混合である必要があります' }, if: lambda {
     new_record? || changes[:crypted_password]
   } 
-  validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
   validates :reset_password_token, uniqueness: true, allow_nil: true
   validates :instagram_account_url, allow_blank: true, format: { with: %r{\Ahttps://(?:www\.)?instagram\.com/[a-zA-Z0-9._%+-]+(=[^&]*)?(\?.+)?\z} }
