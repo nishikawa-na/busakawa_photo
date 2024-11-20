@@ -11,33 +11,30 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params_user)
-    begin
-      @user.save!
+    if @user.save
       auto_login(@user)
       flash[:notice] = "アカウント作成しました"
       redirect_to line_official_path
-    rescue ActiveRecord::RecordInvalid
+    else
       flash.now[:alert] ="アカウント作成に失敗しました"
       render :new, status: :unprocessable_entity
     end
   end
 
   def update
-    @user.update!(params_user)
-    flash[:notice] = "ユーザー情報を更新しました"
-    redirect_to user_path
-  rescue ActiveRecord::RecordInvalid
-    flash.now[:alert] ="ユーザー情報の更新に失敗しました"
-    render :edit, status: :unprocessable_entity
+    if @user.update(params_user)
+      flash[:notice] = "ユーザー情報を更新しました"
+      redirect_to user_path
+    else
+      flash.now[:alert] ="ユーザー情報の更新に失敗しました"
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
     @user.destroy!
     flash[:alert] = "アカウントを削除しました"
     redirect_to root_path
-  rescue ActiveRecord::RecordNotDestroyed
-    flash[:alert] ="アカウント削除に失敗しました もう一度試してください"
-    redirect_to posts_path
   end
 
   def post
