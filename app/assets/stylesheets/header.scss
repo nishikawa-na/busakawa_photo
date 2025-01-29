@@ -1,7 +1,7 @@
 .header{
   background-color: #5B424C;
   width: auto;
-  height: 70px;
+  max-height: 70px;
 }
 
 .header_icon{
@@ -10,6 +10,7 @@
   float: left;
 }
 
+// ヘッダーのハンバーガーメニュー
 .navbar{
   background-color: #5B424C;
   height: 60px;
