@@ -5,7 +5,7 @@ RSpec.describe "Users", type: :system do
     let(:user) { build(:user) }
     it "新規登録のテスト" do
       visit root_path
-      click_link "新規登録"
+      click_link "登録"
       fill_in "ペット名", with: user.name
       attach_file "プロフィール画像", "spec/fixtures/image/profile_test2.png"
       fill_in "メールアドレス", with: user.email
@@ -17,7 +17,7 @@ RSpec.describe "Users", type: :system do
     end
     it "新規登録時にInstagramURLがバリデーションエラーとなるかhttp" do
       visit root_path
-      click_link "新規登録"
+      click_link "登録"
       fill_in "ペット名", with: user.name
       fill_in "InstagramアカウントURL", with: "http://www.instagram.com/"
       fill_in "メールアドレス", with: user.email
@@ -28,7 +28,7 @@ RSpec.describe "Users", type: :system do
     end
     it "新規登録時にInstagramURLがバリデーションエラーとなるかドメイン名" do
       visit root_path
-      click_link "新規登録"
+      click_link "登録"
       fill_in "ペット名", with: user.name
       fill_in "InstagramアカウントURL", with: "https://www.instagra.com/"
       fill_in "メールアドレス", with: user.email
@@ -39,7 +39,7 @@ RSpec.describe "Users", type: :system do
     end
     it "パスワードが英数字の混合でないとエラーとなる" do
       visit root_path
-      click_link "新規登録"
+      click_link "登録"
       fill_in "ペット名", with: user.name
       fill_in "InstagramアカウントURL", with: user.instagram_account_url
       fill_in "メールアドレス", with: user.email

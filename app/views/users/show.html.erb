@@ -1,14 +1,16 @@
-<div class="d-flex justify-content-center">
-  <div class="card" style="width: 18rem;">
-    <%= image_tag @user.avatar.url, size: '200x200', class: "mx-auto d-block p-3 m-4" %>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item"><%= @user.name %></li>
-      <% if @user.instagram_account_url.present? %>
-        <li class="list-group-item">
-          <%= image_tag "Instagram_Glyph_Gradient.png", size: '40x40' %>
-        </li>
-      <% end %>
-      <li class="list-group-item"><%= link_to t('.account_information_change'), edit_user_path %></li>
-    </ul>
+<div class= "container">
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="card" style="width: 18rem;">
+      <%= image_tag @user.avatar.url, size: '200x200', class: "mx-auto d-block p-3 m-4" %>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><%= @user.name %></li>
+        <% if @user.instagram_account_url.present? %>
+          <li class="list-group-item">
+            <%= image_tag "Instagram_Glyph_Gradient.png", size: '40x40' %>
+          </li>
+        <% end %>
+        <li class="list-group-item"><%= link_to t('.account_information_change'), edit_user_path %></li>
+      </ul>
+    </div>
   </div>
 </div>

@@ -1,16 +1,42 @@
-<div class="container">
-    <div class="top_page p-3 m-3">
-      <h1>ぶさかわフォト</h1>
-      <h3>あなたの好きなぶさかわが見つかる</h3>
-      <h3>ペットのぶさかわを投稿しましょう!</h3>
+<div class="container p-4">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <%= image_tag "top_photo.png", class: "top_photo" %>
     </div>
-    <div class="d-flex justify-content-around fs-3" >
-      <%= link_to auth_at_provider_path(:provider => :line) do %>
-        <%= image_tag "btn_login_hover.png" %>
-      <% end %>
-      <%= link_to t('.sign up'), new_user_path, class: "btn btn-outline-info" %>
-      <%= link_to t('.login'), login_path, class: "btn btn-outline-info" %>
-      <%= link_to t('.guest'), posts_path, class: "btn btn-outline-info" %>
+    <div class="col-12 col-md-6 p-3 top_explanation">
+      <div>
+        <h1><strong>ぶさかわフォト</strong></h1>
+        <p>ペットの｢ぶさかわ｣を投稿＆共有<br>普段見れないぶさかわなシーンで癒やされて見ませんか？</p>
+        <div class="d-flex justify-content-evenly" >
+          <%= link_to auth_at_provider_path(:provider => :line) do %>
+            <%= image_tag "btn_login_hover.png" %>
+          <% end %>
+          <%= link_to t('.sign up'), new_user_path, class: "btn btn-outline-info" %>
+          <%= link_to t('.login'), login_path, class: "btn btn-outline-info" %>
+          <%= link_to t('.guest'), posts_path, class: "btn btn-outline-info" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2 class="text-center mt-5"><strong>アプリでできること</strong></h2>
+  <div class="row">
+    <div class="col-12 col-md-6 p-3">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title m-3"><strong>ぶさかわな写真を投稿＆共有</strong></h5>
+          <p><i class="bi bi-check"></i>ぶさかわなシーンを投稿<br><i class="bi bi-check"></i>コメントやいいね<br><i class="bi bi-check"></i>ランキング機能<br><i class="bi bi-check"></i>Xへの共有<br><i class="bi bi-check"></i>Instagramアカウント登録</p>
+          <%= image_tag "top_photo_explanation1", class: "top_photo_explanation p-3" %>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 p-3">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title m-3"><strong>たくさんのぶさかわと出会える</strong></h5>
+          <p><i class="bi bi-check"></i>公式LINEを友達登録すると通知を受け取る事ができます</p>
+          <%= image_tag "top_photo_explanation2", class: "top_photo_explanation p-3" %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
