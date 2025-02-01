@@ -20,7 +20,7 @@ ja:
       push: ログイン
   static_pages:
     index:
-      sign up: 新規登録
+      sign up: 登録
       login: ログイン
       guest: ゲスト
   posts:
