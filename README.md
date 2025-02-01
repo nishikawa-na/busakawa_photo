@@ -37,9 +37,9 @@ https://busakawa.com/
 
 # 機能紹介
 
-| LINEログイン | LINEログイン |
+| Topページ | LINEログイン |
 |:--:|:--:|
-| <a href="https://gyazo.com/a26158ae024b9c3000685eae91f142a4"><img src="https://i.gyazo.com/a26158ae024b9c3000685eae91f142a4.png" width="372"></a> | <a href="https://gyazo.com/cbaf019065448d749f82f0e989a5af71"><img src="https://i.gyazo.com/cbaf019065448d749f82f0e989a5af71.png" width="372"></a> |
+| <a href="https://gyazo.com/5c8d73aea168254c7c2ae935124e2d40"><img src="https://i.gyazo.com/5c8d73aea168254c7c2ae935124e2d40.gif" width="372"/></a> | <a href="https://gyazo.com/cbaf019065448d749f82f0e989a5af71"><img src="https://i.gyazo.com/cbaf019065448d749f82f0e989a5af71.png" width="372"></a> |
 
 | アカウント作成 | ログイン |
 |:--:|:--:|
