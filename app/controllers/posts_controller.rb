@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   skip_before_action :require_login, only: %i[index show]
 
   def index
-    @ranking_posts = Post.left_joins(:like_posts).includes(:user).group('posts.id').order('COUNT(like_posts.id) DESC').limit(4)
+    @ranking_posts = Post.joins(:like_posts).includes(:user).group('posts.id').order('COUNT(like_posts.id) DESC').limit(4)
   end
 
   def show
