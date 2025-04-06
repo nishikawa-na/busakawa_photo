@@ -14,7 +14,7 @@ class PasswordResetsController < ApplicationController
     @user = User.load_from_reset_password_token(params[:id])
 
     if @user.blank?
-      not_authenticated
+      handle_invalid_token
       return
     end
   end
@@ -24,7 +24,7 @@ class PasswordResetsController < ApplicationController
     @user = User.load_from_reset_password_token(params[:id])
 
     if @user.blank?
-      not_authenticated
+      handle_invalid_token
       return
     elsif params[:user][:password].blank?
       flash.now[:alert] = "パスワードの変更に失敗しました パスワードが空です"
