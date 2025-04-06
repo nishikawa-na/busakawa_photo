@@ -26,22 +26,17 @@ class PasswordResetsController < ApplicationController
     if @user.blank?
       handle_invalid_token
       return
-    elsif params[:user][:password].blank?
-      flash.now[:alert] = "パスワードの変更に失敗しました パスワードが空です"
-      render :edit, status: :unprocessable_entity
-      return
     end
-    password_update(@user)
-  end
 
-  private
-
-  def password_update(user)
-    user.password_confirmation = params[:user][:password_confirmation]
-    if user.change_password(params[:user][:password])
+    @user.password_confirmation = params[:user][:password_confirmation]
+    begin
+      @user.change_password!(params[:user][:password])
       flash[:notice] = "パスワードを変更しました"
       redirect_to login_path
-    else
+    rescue ArgumentError => e
+      flash.now[:alert] = "パスワードを入力してください"
+      render :edit, status: :unprocessable_entity
+    rescue ActiveRecord::RecordInvalid => e
       flash.now[:alert] = "パスワードの変更に失敗しました"
       render :edit, status: :unprocessable_entity
     end
