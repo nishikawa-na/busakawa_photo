@@ -36,17 +36,21 @@ class PasswordResetsController < ApplicationController
       return
     end
 
-    begin
-      @user.change_password!(params[:user][:password])
-      @user.reset_password_reset_page_access_counter
-      flash[:notice] = "パスワードを変更しました"
-      redirect_to login_path
-    rescue ArgumentError => e
-      flash.now[:alert] = "パスワードを入力してください"
-      render :edit, status: :unprocessable_entity
-    rescue ActiveRecord::RecordInvalid => e
-      flash.now[:alert] = "パスワードの変更に失敗しました"
-      render :edit, status: :unprocessable_entity
-    end
+    change_password(@user)
+  end
+
+  private
+
+  def change_password(user)
+    user.change_password!(params[:user][:password])
+    user.reset_password_reset_page_access_counter
+    flash[:notice] = "パスワードを変更しました"
+    redirect_to login_path
+  rescue ArgumentError
+    flash.now[:alert] = "パスワードを入力してください"
+    render :edit, status: :unprocessable_entity
+  rescue ActiveRecord::RecordInvalid
+    flash.now[:alert] = "パスワードの変更に失敗しました"
+    render :edit, status: :unprocessable_entity
   end
 end
