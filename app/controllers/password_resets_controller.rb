@@ -12,7 +12,6 @@ class PasswordResetsController < ApplicationController
   def edit
     @token = params[:id]
     @user = User.load_from_reset_password_token(params[:id])
-
     if @user.blank?
       handle_invalid_token
       return
@@ -29,8 +28,17 @@ class PasswordResetsController < ApplicationController
     end
 
     @user.password_confirmation = params[:user][:password_confirmation]
+    @user.increment_password_reset_page_access_counter
+
+    if @user.restrict_password_reset_access == false
+      flash[:alert] = "回数が上限になりました。 30分後に実施してください"
+      redirect_to new_password_reset_path
+      return
+    end
+
     begin
       @user.change_password!(params[:user][:password])
+      @user.reset_password_reset_page_access_counter
       flash[:notice] = "パスワードを変更しました"
       redirect_to login_path
     rescue ArgumentError => e
