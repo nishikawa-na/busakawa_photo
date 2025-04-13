@@ -34,20 +34,4 @@ class User < ApplicationRecord
     followings.include?(user)
   end
 
-  def increment_password_reset_page_access_counter
-    sorcery_adapter.increment(sorcery_config.reset_password_page_access_count_attribute_name)
-  end
-
-  def reset_password_reset_page_access_counter
-    send(:"#{sorcery_config.reset_password_page_access_count_attribute_name}=", 0)
-    sorcery_adapter.save
-  end
-
-  def restrict_password_reset_access
-    if access_count_to_reset_password_page > 5
-      update(reset_password_token: nil, access_count_to_reset_password_page: 0)
-      return false
-    end
-    true
-  end
 end
