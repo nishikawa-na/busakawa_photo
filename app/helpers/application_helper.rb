@@ -17,32 +17,25 @@ module ApplicationHelper
   def assign_meta_tags(options = {})
     defaults = t('meta_tags.defaults')
     options.reverse_merge!(defaults)
-    site = options[:site]
     title = options[:title]
     description = options[:description]
     image = options[:image].presence || image_url('profile.png')
 
     configs = {
-      separator: '|',
-      reverse: true,
-      site:,
+      icon: [{ href: image_url('icon.png') }],
       title:,
       description:,
       canonical: request.original_url,
+      image:,
       og: {
         type: 'website',
         title:,
         description:,
         url: request.original_url,
-        image:,
-        site_name: site
+        image:
       },
       twitter: {
-        card: 'summary',
-        site:,
-        title:,
-        description:,
-        image:
+        card: 'summary'
       }
     }
     set_meta_tags(configs)
