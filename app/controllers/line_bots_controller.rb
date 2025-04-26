@@ -1,5 +1,4 @@
 class LineBotsController < ApplicationController
-  require 'line/bot'
   protect_from_forgery :except => [:webhook]
   skip_before_action :require_login, only: [:webhook]
 
