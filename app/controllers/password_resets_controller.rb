@@ -44,4 +44,9 @@ class PasswordResetsController < ApplicationController
     flash.now[:alert] = "パスワードの変更に失敗しました"
     render :edit, status: :unprocessable_entity
   end
+
+  def handle_invalid_token
+    flash[:alert] = "パスワード変更フォームよりやり直してください"
+    redirect_to new_password_reset_path
+  end
 end
