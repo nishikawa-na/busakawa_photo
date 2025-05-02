@@ -38,7 +38,7 @@ class UsersController < ApplicationController
   end
 
   def post
-    @posts = current_user.posts.all.order("created_at DESC").page(params[:page])
+    @posts = current_user.posts.order("created_at DESC").page(params[:page])
   end
 
   def like_post
