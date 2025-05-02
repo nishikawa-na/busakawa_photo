@@ -1,6 +1,5 @@
-<% if post.like_posts.exists?(user_id: current_user) %>
-  <% @current_user_like_post = post.like_posts.find_by(user_id: current_user.id) %>
-  <%= link_to like_post_path(@current_user_like_post), data: { turbo_method: "delete" } do %>
+<% if current_user.my_like_posts?(post) %>
+  <%= link_to like_post_path(current_user.like_posts.find_by(post_id: post.id)), data: { turbo_method: "delete" } do %>
     <i class="bi bi-heart-fill"></i>
   <% end %> 
 <% else %>

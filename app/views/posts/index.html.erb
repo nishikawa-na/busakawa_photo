@@ -11,9 +11,11 @@
               <%= post.title %>
             </div>
           <% end %>
-          <div id= "like_post-<%= post.id %>">
-            <%= render 'like_posts/like_button', post: post %>
-          </div>
+          <% if logged_in? %>
+            <div id= "like_post-<%= post.id %>">
+              <%= render 'like_posts/like_button', post: post %>
+            </div>
+          <% end %>
           <div class="user">
             <%= image_tag post.user.avatar.url, class: "rounded-circle", size: '50x50' %>
             <%= post.user.name %>
