@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   end
 
   def like_post
-    @posts = Post.includes(:user, :like_posts).where(like_posts: { user_id: current_user.id }).order("like_posts.created_at DESC").page(params[:page])
+    @posts = current_user.my_like_posts.includes(:user).order("like_posts.created_at DESC").page(params[:page])
   end
 
   private
