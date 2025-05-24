@@ -101,6 +101,5 @@ group :test do
   gem 'brakeman'
   gem 'bundler-audit'
   gem "capybara"
-  gem "selenium-webdriver"
   gem "webdrivers"
 end
