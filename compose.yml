@@ -38,7 +38,7 @@ services:
         condition: service_healthy
   chrome:
     image: selenium/standalone-chrome
-    shm_size: 256m
+    shm_size: 2g
     ports:
       - 4444:4444
 volumes:
