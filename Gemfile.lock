@@ -450,7 +450,6 @@ DEPENDENCIES
   rubocop
   rubocop-performance
   rubocop-rails
-  selenium-webdriver
   sorcery
   sprockets-rails
   stimulus-rails

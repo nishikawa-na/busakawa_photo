@@ -25,3 +25,5 @@ ignore:
 - "GHSA-mrxw-mxhj-p664"
 - "GHSA-vvfq-8hwr-qm4m"
 - CVE-2025-43857
+- CVE-2025-46727
+- CVE-2025-46336
