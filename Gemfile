@@ -60,6 +60,8 @@ gem 'ransack'
 
 gem "mini_magick"
 
+gem 'rmagick'
+
 gem 'line-bot-api'
 
 gem 'meta-tags'
