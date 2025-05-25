@@ -17,9 +17,3 @@ ignore:
 - "GHSA-5w6v-399v-w3cc"
 - "GHSA-mrxw-mxhj-p664"
 - "GHSA-vvfq-8hwr-qm4m"
-
-#rack→ minitest-global_expectationsとの依存関係あり
-- CVE-2025-25184
-- CVE-2025-27111
-- CVE-2025-27610
-- CVE-2025-46727
