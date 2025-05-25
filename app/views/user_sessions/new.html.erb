@@ -2,11 +2,11 @@
   <div class= "login">
     <h1 class= "text-center p-3 m-3">ログインページ</h1>
       <%= form_with url: login_path do |form| %>
-        <%= form.label t('.email'), class: "form-label" %>
+        <%= form.label "メールアドレス", class: "form-label" %>
         <%= form.text_field :email, class: "form-control" %>
-        <%= form.label t('.password'), class: "form-label" %>
+        <%= form.label "パスワード", class: "form-label" %>
         <%= form.password_field :password, class: "form-control" %>
-        <%= form.submit t('.push'), class: "btn btn-primary" %>
+        <%= form.submit "ログイン", class: "btn btn-primary" %>
       <% end %>
     <%= link_to "パスワードを忘れた場合こちらへ", new_password_reset_path, class: "password_reset" %>
   </div>
