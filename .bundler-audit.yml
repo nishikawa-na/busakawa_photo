@@ -19,9 +19,7 @@ ignore:
 - "GHSA-vvfq-8hwr-qm4m"
 
 #aaaa
-- CVE-2025-25186 #←変えれそう net-imap
 - CVE-2025-27221 #←変えれそう uri 
-- CVE-2025-43857 #←変えれそう net-imap
 
 #rack→ minitest-global_expectationsとの依存関係あり
 - CVE-2025-25184

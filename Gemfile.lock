@@ -115,7 +115,7 @@ GEM
     crass (1.0.6)
     cssbundling-rails (1.4.0)
       railties (>= 6.0.0)
-    date (3.3.4)
+    date (3.4.1)
     debug (1.9.2)
       irb (~> 1.10)
       reline (>= 0.3.8)
@@ -227,7 +227,7 @@ GEM
     mutex_m (0.2.0)
     net-http (0.4.1)
       uri
-    net-imap (0.4.14)
+    net-imap (0.5.8)
       date
       net-protocol
     net-pop (0.1.2)
@@ -438,6 +438,7 @@ DEPENDENCIES
   line-bot-api
   meta-tags
   mini_magick
+  net-imap (= 0.5.8)
   pg (~> 1.1)
   pry-byebug
   puma (>= 5.0)
