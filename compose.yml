@@ -23,14 +23,11 @@ services:
     stdin_open: true
     volumes:
       - .:/myapp
-      # mkcert　SSL通信にて一時的に使用↓
-      #- ./config/certs:/config/certs:ro
     environment:
       TZ: Asia/Tokyo
       ## ↓Rspecで追加
       SELENIUM_DRIVER_URL: http://chrome:4444/wd/hub
     ports:
-      #　mkcertSSL通信にて一時的に使用　300013001から戻し
       - "3000:3000"
     user: "1000:1000"
     depends_on:
