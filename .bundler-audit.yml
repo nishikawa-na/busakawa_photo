@@ -18,9 +18,6 @@ ignore:
 - "GHSA-mrxw-mxhj-p664"
 - "GHSA-vvfq-8hwr-qm4m"
 
-#aaaa
-- CVE-2025-27221 #←変えれそう uri 
-
 #rack→ minitest-global_expectationsとの依存関係あり
 - CVE-2025-25184
 - CVE-2025-27111
