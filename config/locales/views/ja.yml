@@ -1,33 +1,4 @@
 ja:
-  fotters:
-    inquiry:
-      inquiry: お問い合わせ
-    policy:
-      policy: プライバシーポリシー
-    terms:
-      terms: 利用規約
-  users:
-    new:
-      push: 送信
-    edit:
-      push: 編集
-    show:
-      account_information_change: アカウント情報変更はこちら
-  user_sessions:
-    new:
-      email: メールアドレス
-      password: パスワード
-      push: ログイン
-  static_pages:
-    index:
-      sign up: 登録
-      login: ログイン
-      guest: ゲスト
-  posts:
-    new:
-      push: 投稿する
-    edit:
-      push: 編集
   views:
     pagination:
       first: "&laquo; 最初"
@@ -38,9 +9,3 @@ ja:
   time:
     formats:
       default: "%m月%d日"
-  password_resets:
-    new:
-      email: メールアドレス
-      push: 送信
-    edit:
-      push: 送信
